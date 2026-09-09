@@ -1,0 +1,107 @@
+{
+  "dependencies": [],
+  "uninstallSteps": [
+    {
+      "step": "deletePath",
+      "path": "install"
+    }
+  ],
+  "builds": [
+    {
+      "versions": [
+        "1.0.2"
+      ],
+      "targetPlatforms": [
+        "Windows"
+      ],
+      "dependencies": [],
+      "steps": [
+        {
+          "step": "createDir",
+          "path": ".build"
+        },
+        {
+          "step": "fetch",
+          "url": "https://github.com/JackandBeans/Snap64Recomp/releases/download/v1.0.2/Snap64Recomp-1.0.2-win64.zip",
+          "dest": ".build/Snap64Recomp-1.0.2-win64.zip"
+        },
+        {
+          "step": "extract",
+          "src": ".build/Snap64Recomp-1.0.2-win64.zip",
+          "dest": ".build"
+        },
+        {
+          "step": "deletePath",
+          "path": ".build/Snap64Recomp-1.0.2-win64.zip"
+        },
+        {
+          "step": "move",
+          "src": ".build/Snap64Recomp-1.0.2-win64",
+          "dest": "install"
+        },
+        {
+          "step": "deletePath",
+          "path": ".build"
+        },
+        {
+          "step": "copy",
+          "from": "rom",
+          "dest": "install/pokemonsnap.z64"
+        },
+        {
+          "step": "defineExecutable",
+          "executable": "install/Snap64Recomp.exe",
+          "title": "Play"
+        }
+      ]
+    },
+    {
+      "versions": [
+        "1.0.2"
+      ],
+      "targetPlatforms": [
+        "Linux"
+      ],
+      "dependencies": [],
+      "steps": [
+        {
+          "step": "createDir",
+          "path": ".build"
+        },
+        {
+          "step": "fetch",
+          "url": "https://github.com/JackandBeans/Snap64Recomp/releases/download/v1.0.2/Snap64Recomp-1.0.2-linux-x86_64.tar.gz",
+          "dest": ".build/Snap64Recomp-1.0.2-linux-x86_64.tar.gz"
+        },
+        {
+          "step": "extract",
+          "src": ".build/Snap64Recomp-1.0.2-linux-x86_64.tar.gz",
+          "dest": ".build"
+        },
+        {
+          "step": "deletePath",
+          "path": ".build/Snap64Recomp-1.0.2-linux-x86_64.tar.gz"
+        },
+        {
+          "step": "move",
+          "src": ".build/Snap64Recomp-1.0.2-linux-x86_64",
+          "dest": "install"
+        },
+        {
+          "step": "deletePath",
+          "path": ".build"
+        },
+        {
+          "step": "copy",
+          "from": "rom",
+          "dest": "install/pokemonsnap.z64"
+        },
+        {
+          "step": "defineExecutable",
+          "executable": "install/Snap64Recomp",
+          "title": "Play"
+        }
+      ]
+    }
+  ]
+}
