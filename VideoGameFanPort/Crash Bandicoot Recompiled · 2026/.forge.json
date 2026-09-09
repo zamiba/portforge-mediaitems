@@ -1,0 +1,62 @@
+{
+  "defaultVersion": "1.9",
+  "buildPaths": [".build"],
+  "uninstallSteps": [
+    { "step": "deletePath", "path": "install" }
+  ],
+  "builds": [
+    {
+      "versions": ["1.9"],
+      "targetPlatforms": ["Windows"],
+      "dependencies": ["powershell"],
+      "steps": [
+        { "step": "createDir", "path": ".build" },
+        {
+          "step": "fetch",
+          "url": "https://github.com/Matteo842/CrashBandicoot-Launcher/releases/download/1.9/CrashBandicoot.exe",
+          "dest": ".build/CrashBandicoot.exe"
+        },
+        { "step": "createDir", "path": "install/disc" },
+        { "step": "copy", "from": "rom", "src": "Crash Bandicoot (USA)", "dest": "install/disc/crash.bin" },
+        {
+          "step": "run",
+          "cmd": "powershell",
+          "args": [
+            "-NoProfile", "-NonInteractive", "-Command",
+            "Set-Content -LiteralPath 'install/disc/crash.cue' -Encoding Ascii -ErrorAction Stop -Value @('FILE \"crash.bin\" BINARY', '  TRACK 01 MODE2/2352', '    INDEX 01 00:00:00'); if (!(Test-Path -LiteralPath 'install/settings.json')) { Set-Content -LiteralPath 'install/settings.json' -Encoding Ascii -ErrorAction Stop -Value '{\"CdPath\":\"disc/crash.cue\"}' }"
+          ]
+        },
+        { "step": "move", "src": ".build/CrashBandicoot.exe", "dest": "install/CrashBandicoot.exe" },
+        { "step": "deletePath", "path": ".build" },
+        { "step": "defineExecutable", "executable": "install/CrashBandicoot.exe", "title": "Open launcher" }
+      ]
+    },
+    {
+      "versions": ["1.9"],
+      "targetPlatforms": ["Linux"],
+      "dependencies": ["sh", "chmod"],
+      "steps": [
+        { "step": "createDir", "path": ".build" },
+        {
+          "step": "fetch",
+          "url": "https://github.com/Matteo842/CrashBandicoot-Launcher/releases/download/1.9/CrashBandicoot-Linux",
+          "dest": ".build/CrashBandicoot-Linux"
+        },
+        { "step": "createDir", "path": "install/disc" },
+        { "step": "copy", "from": "rom", "src": "Crash Bandicoot (USA)", "dest": "install/disc/crash.bin" },
+        {
+          "step": "run",
+          "cmd": "sh",
+          "args": [
+            "-eu", "-c",
+            "printf '%s\n' 'FILE \"crash.bin\" BINARY' '  TRACK 01 MODE2/2352' '    INDEX 01 00:00:00' > install/disc/crash.cue\nprintf '%s\n' '#!/bin/sh' 'exec ./CrashBandicoot-Linux --run disc/crash.cue' > install/play.sh"
+          ]
+        },
+        { "step": "move", "src": ".build/CrashBandicoot-Linux", "dest": "install/CrashBandicoot-Linux" },
+        { "step": "run", "cmd": "chmod", "args": ["+x", "install/CrashBandicoot-Linux", "install/play.sh"] },
+        { "step": "deletePath", "path": ".build" },
+        { "step": "defineExecutable", "executable": "install/play.sh", "title": "Play" }
+      ]
+    }
+  ]
+}
