@@ -1,0 +1,46 @@
+{
+  "_itemType": "N64CartRom",
+  "title": "Pokemon Snap (USA)",
+  "platform": "N64",
+  "formats": [
+    {
+      "filename": "Pokemon Snap (USA).z64",
+      "filesize": 16777216,
+      "format": "BigEndian",
+      "ext": "z64",
+      "serial": "NPFE",
+      "checksums": {
+        "md5": "fc3c9329b7cdd67cf7650abf63b9a580",
+        "sha1": "edc7c49cc568c045fe48be0d18011c30f393cbaf",
+        "sha256": "a1d5d816db7f8557ee04c35a011326d058b2c1fbca76b57b352b1d705a1ec1cc",
+        "crc32": "86a69756"
+      }
+    },
+    {
+      "filename": "Pokemon Snap (USA).v64",
+      "filesize": 16777216,
+      "format": "ByteSwapped",
+      "ext": "v64",
+      "serial": "NPFE",
+      "checksums": {
+        "md5": "9b10b9d70dac67ae40953148fbe9cb96",
+        "sha1": "cfa6c20848651b686761f3bd72d5d97c3b83cca9",
+        "sha256": "26c3e1dc3fb4fd687623c8f8e3115b7671b5d1a556034607e4434ab8ad90ddab",
+        "crc32": "df387848"
+      }
+    },
+    {
+      "filename": "Pokemon Snap (USA).n64",
+      "filesize": 16777216,
+      "format": "LittleEndian",
+      "ext": "n64",
+      "serial": "NPFE",
+      "checksums": {
+        "md5": "010702470ef7b5d06c7878079cce3e37",
+        "sha1": "97f5258750d944a6e695bd77187fc57300e7d4f6",
+        "sha256": "70bf1b095d4ccd712da91f4e0ded065ab5812cc0b1ca304a27036eced9924ace",
+        "crc32": "1d4a028f"
+      }
+    }
+  ]
+}
