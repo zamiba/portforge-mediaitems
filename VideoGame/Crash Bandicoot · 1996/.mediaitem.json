@@ -1,0 +1,18 @@
+{
+  "_itemType": "VideoGame",
+  "_schemaVersion": "1.0",
+  "_parentItemType": { "title": "Anything", "schemaVersion": "1.0" },
+  "_itemTitle": "Crash Bandicoot · 1996",
+  "title": "Crash Bandicoot",
+  "releaseYear": 1996,
+  "description": "A PlayStation platform game developed by Naughty Dog. Crash crosses the Wumpa Islands to rescue Tawna and stop Dr. Neo Cortex, jumping over obstacles, spinning through enemies, and breaking crates along the way.",
+  "versions": [
+    {
+      "_itemType": "VideoGameFanPort",
+      "_itemTitle": "Crash Bandicoot Recompiled · 2026",
+      "title": "Crash Bandicoot Recompiled",
+      "releaseYear": 2026,
+      "versionType": "FanPort"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "_itemType": "PS1DiscImage",
+  "_itemTitle": "Crash Bandicoot (USA) · PS1",
+  "title": "Crash Bandicoot (USA)",
+  "platform": "PS1",
+  "formats": [
+    {
+      "filename": "Crash Bandicoot (USA).bin",
+      "filesize": 632083536,
+      "ext": "bin",
+      "checksums": {
+        "md5": "b4aeaf0c0bb2f2000f31d12e7b59f8f9",
+        "sha1": "61ff4c9e8dcfb9e5d94d37f66330b69d08d6c914",
+        "sha256": "35d4b837108adc4c5313a45c0f203aa76bc0911873204e908512187379eb98ec",
+        "crc32": "41b5f211"
+      }
+    }
+  ]
+}
