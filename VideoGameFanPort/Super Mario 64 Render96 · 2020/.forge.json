@@ -47,19 +47,19 @@
         },
         {
           "step": "fetch",
-          "if": "${textureMod} != none",
-          "url": "https://github.com/GhostlyDark/SM64-Reloaded/releases/download/v2.6.0/sm64-reloaded-v2.6.0-sm64ex-${textureMod}.zip",
+          "if": "${args.textureMod} != none",
+          "url": "https://github.com/GhostlyDark/SM64-Reloaded/releases/download/v2.6.0/sm64-reloaded-v2.6.0-sm64ex-${args.textureMod}.zip",
           "dest": "./.build/Render96ex-cd02b8886e0a0498c23b0c1f1e58f0b7c70ccc66/build/us_pc/textures.zip"
         },
         {
           "step": "extract",
-          "if": "${textureMod} != none",
+          "if": "${args.textureMod} != none",
           "src": "./.build/Render96ex-cd02b8886e0a0498c23b0c1f1e58f0b7c70ccc66/build/us_pc/textures.zip",
           "dest": ".build/Render96ex-cd02b8886e0a0498c23b0c1f1e58f0b7c70ccc66/build/us_pc/res"
         },
         {
           "step": "deletePath",
-          "if": "${textureMod} != none",
+          "if": "${args.textureMod} != none",
           "path": "./.build/Render96ex-cd02b8886e0a0498c23b0c1f1e58f0b7c70ccc66/build/us_pc/textures.zip"
         },
         {

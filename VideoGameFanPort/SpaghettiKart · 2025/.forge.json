@@ -39,9 +39,9 @@
         { "step": "copy", "from": "rom", "dest": "./.build/Mario Kart 64 (USA).z64" },
         {
           "step": "fetch",
-          "if": "${textureMod} != none",
-          "url": "https://evilgames.eu/files/texture-packs/mk64-reloaded-v2026.04.03-sk-${textureMod}.o2r",
-          "dest": "./.build/mods/mk64-reloaded-v2026.04.03-sk-${textureMod}.o2r"
+          "if": "${args.textureMod} != none",
+          "url": "https://evilgames.eu/files/texture-packs/mk64-reloaded-v2026.04.03-sk-${args.textureMod}.o2r",
+          "dest": "./.build/mods/mk64-reloaded-v2026.04.03-sk-${args.textureMod}.o2r"
         },
         { "step": "move", "src": "./.build", "dest": "./install" },
         { "step": "deletePath", "path": "./.build" },
@@ -64,9 +64,9 @@
         { "step": "copy", "from": "rom", "dest": "./.build/Mario Kart 64 (USA).z64" },
         {
           "step": "fetch",
-          "if": "${textureMod} != none",
-          "url": "https://evilgames.eu/files/texture-packs/mk64-reloaded-v2026.04.03-sk-${textureMod}.o2r",
-          "dest": "./.build/mods/mk64-reloaded-v2026.04.03-sk-${textureMod}.o2r"
+          "if": "${args.textureMod} != none",
+          "url": "https://evilgames.eu/files/texture-packs/mk64-reloaded-v2026.04.03-sk-${args.textureMod}.o2r",
+          "dest": "./.build/mods/mk64-reloaded-v2026.04.03-sk-${args.textureMod}.o2r"
         },
         { "step": "move", "src": "./.build", "dest": "./install" },
         { "step": "deletePath", "path": "./.build" },
@@ -89,9 +89,9 @@
         { "step": "copy", "from": "rom", "dest": "./.build/Mario Kart 64 (USA).z64" },
         {
           "step": "fetch",
-          "if": "${textureMod} != none",
-          "url": "https://evilgames.eu/files/texture-packs/mk64-reloaded-v2026.04.03-sk-${textureMod}.o2r",
-          "dest": "./.build/mods/mk64-reloaded-v2026.04.03-sk-${textureMod}.o2r"
+          "if": "${args.textureMod} != none",
+          "url": "https://evilgames.eu/files/texture-packs/mk64-reloaded-v2026.04.03-sk-${args.textureMod}.o2r",
+          "dest": "./.build/mods/mk64-reloaded-v2026.04.03-sk-${args.textureMod}.o2r"
         },
         { "step": "move", "src": "./.build", "dest": "./install" },
         { "step": "deletePath", "path": "./.build" },
@@ -114,9 +114,9 @@
         { "step": "copy", "from": "rom", "dest": "./.build/Mario Kart 64 (USA).z64" },
         {
           "step": "fetch",
-          "if": "${textureMod} != none",
-          "url": "https://evilgames.eu/files/texture-packs/mk64-reloaded-v2026.04.03-sk-${textureMod}.o2r",
-          "dest": "./.build/mods/mk64-reloaded-v2026.04.03-sk-${textureMod}.o2r"
+          "if": "${args.textureMod} != none",
+          "url": "https://evilgames.eu/files/texture-packs/mk64-reloaded-v2026.04.03-sk-${args.textureMod}.o2r",
+          "dest": "./.build/mods/mk64-reloaded-v2026.04.03-sk-${args.textureMod}.o2r"
         },
         { "step": "move", "src": "./.build", "dest": "./install" },
         { "step": "deletePath", "path": "./.build" },

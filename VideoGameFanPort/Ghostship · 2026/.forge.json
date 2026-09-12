@@ -39,20 +39,20 @@
         { "step": "copy", "from": "rom", "dest": "./.build/rom.z64" },
         {
           "step": "fetch",
-          "if": "${textureMod} != none",
-          "url": "https://evilgames.eu/files/texture-packs/sm64-reloaded-v2.6.0-gs-o2r-${textureMod}.7z",
-          "dest": "./.build/mods/sm64-reloaded-v2.6.0-gs-o2r-${textureMod}.7z"
+          "if": "${args.textureMod} != none",
+          "url": "https://evilgames.eu/files/texture-packs/sm64-reloaded-v2.6.0-gs-o2r-${args.textureMod}.7z",
+          "dest": "./.build/mods/sm64-reloaded-v2.6.0-gs-o2r-${args.textureMod}.7z"
         },
         {
           "step": "extract",
-          "if": "${textureMod} != none",
-          "src": "./.build/mods/sm64-reloaded-v2.6.0-gs-o2r-${textureMod}.7z",
+          "if": "${args.textureMod} != none",
+          "src": "./.build/mods/sm64-reloaded-v2.6.0-gs-o2r-${args.textureMod}.7z",
           "dest": ".build/mods"
         },
         {
           "step": "deletePath",
-          "if": "${textureMod} != none",
-          "path": "./.build/mods/sm64-reloaded-v2.6.0-gs-o2r-${textureMod}.7z"
+          "if": "${args.textureMod} != none",
+          "path": "./.build/mods/sm64-reloaded-v2.6.0-gs-o2r-${args.textureMod}.7z"
         },
         { "step": "move", "src": "./.build", "dest": "./install" },
         { "step": "deletePath", "path": "./.build" },
@@ -76,20 +76,20 @@
         { "step": "copy", "from": "rom", "dest": "./.build/rom.z64" },
         {
           "step": "fetch",
-          "if": "${textureMod} != none",
-          "url": "https://evilgames.eu/files/texture-packs/sm64-reloaded-v2.6.0-gs-o2r-${textureMod}.7z",
-          "dest": "./.build/mods/sm64-reloaded-v2.6.0-gs-o2r-${textureMod}.7z"
+          "if": "${args.textureMod} != none",
+          "url": "https://evilgames.eu/files/texture-packs/sm64-reloaded-v2.6.0-gs-o2r-${args.textureMod}.7z",
+          "dest": "./.build/mods/sm64-reloaded-v2.6.0-gs-o2r-${args.textureMod}.7z"
         },
         {
           "step": "extract",
-          "if": "${textureMod} != none",
-          "src": "./.build/mods/sm64-reloaded-v2.6.0-gs-o2r-${textureMod}.7z",
+          "if": "${args.textureMod} != none",
+          "src": "./.build/mods/sm64-reloaded-v2.6.0-gs-o2r-${args.textureMod}.7z",
           "dest": ".build/mods"
         },
         {
           "step": "deletePath",
-          "if": "${textureMod} != none",
-          "path": "./.build/mods/sm64-reloaded-v2.6.0-gs-o2r-${textureMod}.7z"
+          "if": "${args.textureMod} != none",
+          "path": "./.build/mods/sm64-reloaded-v2.6.0-gs-o2r-${args.textureMod}.7z"
         },
         { "step": "move", "src": "./.build", "dest": "./install" },
         { "step": "deletePath", "path": "./.build" },
