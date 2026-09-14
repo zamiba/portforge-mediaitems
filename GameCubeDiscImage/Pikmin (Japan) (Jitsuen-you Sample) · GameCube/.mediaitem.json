@@ -1,0 +1,17 @@
+{
+  "_itemType": "GameCubeDiscImage",
+  "title": "Pikmin (Japan) (Jitsuen-you Sample)",
+  "platform": "GameCube",
+  "formats": [
+    {
+      "filename": "Pikmin (Japan) (Jitsuen-you Sample).iso",
+      "filesize": 1459978240,
+      "ext": "iso",
+      "checksums": {
+        "md5": "6e5d520487c7f2473c98ae1718314e2c",
+        "sha1": "a9be88b47aa7927e1cd9eab70857bc72f47d8edd",
+        "crc32": "d38f1968"
+      }
+    }
+  ]
+}

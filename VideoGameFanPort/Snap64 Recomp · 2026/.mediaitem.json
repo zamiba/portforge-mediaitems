@@ -1,0 +1,47 @@
+{
+  "_itemType": "VideoGameFanPort",
+  "_parentItemType": {
+    "title": "VideoGameVersion",
+    "schemaVersion": "1.0"
+  },
+  "_itemTitle": "Snap64 Recomp · 2026",
+  "title": "Snap64 Recomp",
+  "description": "Snap64 Recomp is a native port of Pokémon Snap (Nintendo 64, US release) made by static recompilation with N64Recomp: the game's own code runs on your PC, hosted by N64ModernRuntime and rendered by RT64. Console behaviour by default, every enhancement off until turned on: frame interpolation, widescreen, anti-aliasing and super sampling, keyboard and mouse, gyro aim, and the 1999 Blockbuster Snap Station sticker printer emulated on controller port 4. You need your own dump of the US cartridge; no game data is included.",
+  "releaseYear": 2026,
+  "versionType": "FanPort",
+  "platforms": [
+    "Windows",
+    "Linux"
+  ],
+  "videoGame": {
+    "_itemType": "VideoGame",
+    "_itemTitle": "Pokémon Snap · 1999",
+    "releaseYear": 1999,
+    "title": "Pokémon Snap",
+    "sortTitle": "Pokemon Snap"
+  },
+  "romDependencies": [
+    {
+      "name": "Pokémon Snap",
+      "required": true,
+      "options": [
+        {
+          "_itemType": "N64CartRom",
+          "title": "Pokemon Snap (USA)"
+        }
+      ]
+    }
+  ],
+  "artwork": [
+    {
+      "artworkType": "Cover",
+      "fileExtension": "png",
+      "fileName": "Cover · en · 1.png"
+    },
+    {
+      "artworkType": "Hero",
+      "fileExtension": "png",
+      "fileName": "Hero · 1.png"
+    }
+  ]
+}

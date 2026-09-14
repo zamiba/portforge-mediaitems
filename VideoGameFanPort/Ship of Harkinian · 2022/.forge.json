@@ -63,20 +63,20 @@
         },
         {
           "step": "fetch",
-          "if": "${textureMod} != none",
-          "url": "https://evilgames.eu/files/texture-packs/oot-reloaded-v11.0.0-soh-o2r-${textureMod}.7z",
-          "dest": "./.build/mods/oot-reloaded-v11.0.0-soh-o2r-${textureMod}.7z"
+          "if": "${args.textureMod} != none",
+          "url": "https://evilgames.eu/files/texture-packs/oot-reloaded-v11.0.0-soh-o2r-${args.textureMod}.7z",
+          "dest": "./.build/mods/oot-reloaded-v11.0.0-soh-o2r-${args.textureMod}.7z"
         },
         {
           "step": "extract",
-          "if": "${textureMod} != none",
-          "src": "./.build/mods/oot-reloaded-v11.0.0-soh-o2r-${textureMod}.7z",
+          "if": "${args.textureMod} != none",
+          "src": "./.build/mods/oot-reloaded-v11.0.0-soh-o2r-${args.textureMod}.7z",
           "dest": ".build/mods"
         },
         {
           "step": "deletePath",
-          "if": "${textureMod} != none",
-          "path": "./.build/mods/oot-reloaded-v11.0.0-soh-o2r-${textureMod}.7z"
+          "if": "${args.textureMod} != none",
+          "path": "./.build/mods/oot-reloaded-v11.0.0-soh-o2r-${args.textureMod}.7z"
         },
         {
           "step": "move",
@@ -132,20 +132,20 @@
         },
         {
           "step": "fetch",
-          "if": "${textureMod} != none",
-          "url": "https://evilgames.eu/files/texture-packs/oot-reloaded-v11.0.0-soh-o2r-${textureMod}.7z",
-          "dest": "./.build/mods/oot-reloaded-v11.0.0-soh-o2r-${textureMod}.7z"
+          "if": "${args.textureMod} != none",
+          "url": "https://evilgames.eu/files/texture-packs/oot-reloaded-v11.0.0-soh-o2r-${args.textureMod}.7z",
+          "dest": "./.build/mods/oot-reloaded-v11.0.0-soh-o2r-${args.textureMod}.7z"
         },
         {
           "step": "extract",
-          "if": "${textureMod} != none",
-          "src": "./.build/mods/oot-reloaded-v11.0.0-soh-o2r-${textureMod}.7z",
+          "if": "${args.textureMod} != none",
+          "src": "./.build/mods/oot-reloaded-v11.0.0-soh-o2r-${args.textureMod}.7z",
           "dest": ".build/mods"
         },
         {
           "step": "deletePath",
-          "if": "${textureMod} != none",
-          "path": "./.build/mods/oot-reloaded-v11.0.0-soh-o2r-${textureMod}.7z"
+          "if": "${args.textureMod} != none",
+          "path": "./.build/mods/oot-reloaded-v11.0.0-soh-o2r-${args.textureMod}.7z"
         },
         {
           "step": "move",

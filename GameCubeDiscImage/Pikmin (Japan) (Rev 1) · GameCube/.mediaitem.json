@@ -1,0 +1,17 @@
+{
+  "_itemType": "GameCubeDiscImage",
+  "title": "Pikmin (Japan) (Rev 1)",
+  "platform": "GameCube",
+  "formats": [
+    {
+      "filename": "Pikmin (Japan) (Rev 1).iso",
+      "filesize": 1459978240,
+      "ext": "iso",
+      "checksums": {
+        "md5": "1fe42e4bdb0ef1442103c74fca7c9dce",
+        "sha1": "a78b8f20928822edd4ba76c4a80cd9fe7175fba6",
+        "crc32": "3371b99a"
+      }
+    }
+  ]
+}

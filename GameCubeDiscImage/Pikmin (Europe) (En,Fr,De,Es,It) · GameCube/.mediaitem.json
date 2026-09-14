@@ -1,0 +1,17 @@
+{
+  "_itemType": "GameCubeDiscImage",
+  "title": "Pikmin (Europe) (En,Fr,De,Es,It)",
+  "platform": "GameCube",
+  "formats": [
+    {
+      "filename": "Pikmin (Europe) (En,Fr,De,Es,It).iso",
+      "filesize": 1459978240,
+      "ext": "iso",
+      "checksums": {
+        "md5": "f8a29cb63d0599f8297efa899a504ebf",
+        "sha1": "40c46bd6921e55558e9838930a9ffd2179802b4f",
+        "crc32": "07ae1f8b"
+      }
+    }
+  ]
+}

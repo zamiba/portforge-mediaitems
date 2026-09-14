@@ -1,0 +1,17 @@
+{
+  "_itemType": "GameCubeDiscImage",
+  "title": "Pikmin (USA)",
+  "platform": "GameCube",
+  "formats": [
+    {
+      "filename": "Pikmin (USA).iso",
+      "filesize": 1459978240,
+      "ext": "iso",
+      "checksums": {
+        "md5": "ad7cabf64f5e8446596407dc537867a7",
+        "sha1": "8e1281a16c94b27b007a2af475128e68e967503b",
+        "crc32": "be71db21"
+      }
+    }
+  ]
+}
