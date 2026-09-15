@@ -1,0 +1,31 @@
+{
+  "_itemType": "VideoGameFanPort",
+  "_parentItemType": {
+    "title": "VideoGameVersion",
+    "schemaVersion": "1.0"
+  },
+  "_itemTitle": "Crash Bandicoot Recompiled · 2026",
+  "title": "Crash Bandicoot Recompiled",
+  "description": "An unofficial Crash Bandicoot (PlayStation) recompilation launcher built on RecompOne, with native 16:9 widescreen and mod support. The game is recompiled locally on first launch.\n\nRequires your own USA disc dump (SCUS-94900). Import the matching .bin into PortForge's ROM library before installing; the installer creates its single-track .cue automatically. No game data is downloaded.\n\nWindows 10/11 x64: open the launcher and choose Start Game. Linux x64: Play prepares and starts the game directly; OpenGL 4.3 or newer is required. OpenAL Soft and the .NET runtime are bundled. Keep the installed disc folder: the dump is required every time you play.\n\nProject and support: https://github.com/Matteo842/CrashBandicoot-Launcher\n\nThis is a fan project, not affiliated with Sony, Activision, or Naughty Dog. Crash Bandicoot belongs to its respective rights holders.",
+  "releaseYear": 2026,
+  "versionType": "FanPort",
+  "platforms": ["Windows", "Linux"],
+  "videoGame": {
+    "_itemType": "VideoGame",
+    "_itemTitle": "Crash Bandicoot · 1996",
+    "title": "Crash Bandicoot",
+    "releaseYear": 1996
+  },
+  "romDependencies": [
+    {
+      "name": "Crash Bandicoot (USA)",
+      "required": true,
+      "options": [
+        { "_itemType": "PS1DiscImage", "title": "Crash Bandicoot (USA)" }
+      ]
+    }
+  ],
+  "artwork": [
+    { "artworkType": "Cover", "fileExtension": "png", "fileName": "Cover · en · 1.png" }
+  ]
+}
