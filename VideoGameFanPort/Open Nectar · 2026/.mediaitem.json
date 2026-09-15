@@ -1,0 +1,43 @@
+{
+  "_itemType": "VideoGameFanPort",
+  "_parentItemType": {
+    "title": "VideoGameVersion",
+    "schemaVersion": "1.0"
+  },
+  "_itemTitle": "Open Nectar · 2026",
+  "title": "Open Nectar",
+  "description": "Native, experimental, and open-source port of *Pikmin* (GameCube, 2001) for **Linux and Windows**. Runs the game code directly on the host system and translates GX to OpenGL; does not use Dolphin or any emulator.\n\nThis project builds upon the decompilation by [projectPiki/pikmin](https://github.com/projectPiki/pikmin) and adds a native PC port layer.",
+  "releaseYear": 2026,
+  "versionType": "FanPort",
+  "tags": [
+    "Pikmin",
+    "decompilation"
+  ],
+  "platforms": [
+    "Windows",
+    "Linux"
+  ],
+  "videoGame": {
+    "_itemType": "VideoGame",
+    "_itemTitle": "Pikmin · 2001",
+    "releaseYear": 2001,
+    "title": "Pikmin",
+    "sortTitle": "Pikmin 1"
+  },
+  "romDependencies": [
+    {
+      "name": "Pikmin",
+      "required": true,
+      "options": [
+        {
+          "_itemType": "GameCubeDiscImage",
+          "title": "Pikmin (USA) (Rev 1)"
+        },
+        {
+          "_itemType": "GameCubeDiscImage",
+          "title": "Pikmin (Europe) (En,Fr,De,Es,It)"
+        }
+      ]
+    }
+  ]
+}

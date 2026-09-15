@@ -1,0 +1,55 @@
+{
+  "userDataPaths": [
+    "install/save",
+    "install/pikmin_settings.conf"
+  ],
+  "uninstallSteps": [
+    { "step": "deletePath", "path": "install" }
+  ],
+  "builds": [
+    {
+      "versions": ["0.5_fix"],
+      "targetPlatforms": ["Linux-x64"],
+      "dependencies": ["install/nectar-launcher"],
+      "steps": [
+        { "step": "createDir", "path": ".build" },
+        {
+          "step": "fetch",
+          "url": "https://github.com/SSunnKing/Open-Nectar---Pikmin-Native-PC-Port/releases/download/0.5_fix/nectar-linux.tar.gz",
+          "dest": ".build/nectar-linux.tar.gz"
+        },
+        { "step": "extract", "src": ".build/nectar-linux.tar.gz", "dest": ".build" },
+        { "step": "move", "src": ".build/nectar-linux", "dest": "install" },
+        { "step": "deletePath", "path": ".build" },
+        {
+          "step": "run",
+          "cmd": "install/nectar-launcher",
+          "args": ["--rom", "${romPath}", "--install-dir", "install", "--extract-only"]
+        },
+        { "step": "defineExecutable", "executable": "install/nectar-launcher", "title": "Play" }
+      ]
+    },
+    {
+      "versions": ["0.5_fix"],
+      "targetPlatforms": ["Windows-x64"],
+      "dependencies": ["install/nectar-launcher.exe"],
+      "steps": [
+        { "step": "createDir", "path": ".build" },
+        {
+          "step": "fetch",
+          "url": "https://github.com/SSunnKing/Open-Nectar---Pikmin-Native-PC-Port/releases/download/0.5_fix/nectar-windows.zip",
+          "dest": ".build/nectar-windows.zip"
+        },
+        { "step": "extract", "src": ".build/nectar-windows.zip", "dest": ".build" },
+        { "step": "move", "src": ".build/nectar-windows", "dest": "install" },
+        { "step": "deletePath", "path": ".build" },
+        {
+          "step": "run",
+          "cmd": "install/nectar-launcher.exe",
+          "args": ["--rom", "${romPath}", "--install-dir", "install", "--extract-only"]
+        },
+        { "step": "defineExecutable", "executable": "install/nectar-launcher.exe", "title": "Play" }
+      ]
+    }
+  ]
+}
