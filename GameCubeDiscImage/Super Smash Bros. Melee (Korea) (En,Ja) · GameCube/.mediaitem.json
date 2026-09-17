@@ -1,0 +1,17 @@
+{
+  "_itemType": "GameCubeDiscImage",
+  "title": "Super Smash Bros. Melee (Korea) (En,Ja)",
+  "platform": "GameCube",
+  "formats": [
+    {
+      "filename": "Super Smash Bros. Melee (Korea) (En,Ja).iso",
+      "filesize": 1459978240,
+      "ext": "iso",
+      "checksums": {
+        "md5": "315d6c0f5f6a0b778af7858a0a19c24e",
+        "sha1": "d7571deaa129199e05f7f5497920ecec5b2b62c9",
+        "crc32": "7dbb2eed"
+      }
+    }
+  ]
+}

@@ -8,14 +8,14 @@
   ],
   "builds": [
     {
-      "versions": ["0.5_fix"],
+      "versions": ["0.6"],
       "targetPlatforms": ["Linux-x64"],
       "dependencies": ["install/nectar-launcher"],
       "steps": [
         { "step": "createDir", "path": ".build" },
         {
           "step": "fetch",
-          "url": "https://github.com/SSunnKing/Open-Nectar---Pikmin-Native-PC-Port/releases/download/0.5_fix/nectar-linux.tar.gz",
+          "url": "https://github.com/SSunnKing/Open-Nectar---Pikmin-Native-PC-Mobile-Port/releases/download/0.6/nectar-linux.tar.gz",
           "dest": ".build/nectar-linux.tar.gz"
         },
         { "step": "extract", "src": ".build/nectar-linux.tar.gz", "dest": ".build" },
@@ -30,14 +30,14 @@
       ]
     },
     {
-      "versions": ["0.5_fix"],
+      "versions": ["0.6"],
       "targetPlatforms": ["Windows-x64"],
       "dependencies": ["install/nectar-launcher.exe"],
       "steps": [
         { "step": "createDir", "path": ".build" },
         {
           "step": "fetch",
-          "url": "https://github.com/SSunnKing/Open-Nectar---Pikmin-Native-PC-Port/releases/download/0.5_fix/nectar-windows.zip",
+          "url": "https://github.com/SSunnKing/Open-Nectar---Pikmin-Native-PC-Mobile-Port/releases/download/0.6/nectar-windows.zip",
           "dest": ".build/nectar-windows.zip"
         },
         { "step": "extract", "src": ".build/nectar-windows.zip", "dest": ".build" },

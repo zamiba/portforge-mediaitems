@@ -1,0 +1,17 @@
+{
+  "_itemType": "GameCubeDiscImage",
+  "title": "Super Smash Bros. Melee (Europe, Australia) (En,Fr,De,Es,It)",
+  "platform": "GameCube",
+  "formats": [
+    {
+      "filename": "Super Smash Bros. Melee (Europe, Australia) (En,Fr,De,Es,It).iso",
+      "filesize": 1459978240,
+      "ext": "iso",
+      "checksums": {
+        "md5": "5e118fc2d85350b7b092d0192bfb0f1a",
+        "sha1": "d0a925866379c546ceb739eeb780d011383cb07c",
+        "crc32": "0fd01424"
+      }
+    }
+  ]
+}

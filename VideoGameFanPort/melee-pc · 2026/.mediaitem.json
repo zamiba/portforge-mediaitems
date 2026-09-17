@@ -1,0 +1,39 @@
+{
+  "_itemType": "VideoGameFanPort",
+  "_parentItemType": {
+    "title": "VideoGameVersion",
+    "schemaVersion": "1.0"
+  },
+  "_itemTitle": "melee-pc · 2026",
+  "title": "melee-pc",
+  "description": "**Beta, for testing only.** \"melee-pc\" is a working name. Online play with rollback netcode is planned and **not implemented yet**.\n\nA native PC port of Super Smash Bros. Melee (NTSC-U 1.02), built from [doldecomp/melee](https://github.com/doldecomp/melee) on top of [aurora](https://github.com/encounter/aurora) (GX/OS/PAD/DVD/CARD/THP compatibility layer with a WebGPU backend) and SDL3. Same approach as [dusklight](https://github.com/TwilitRealm/dusklight).\n\nYou need your own disc image. No game data ships here.",
+  "releaseYear": 2026,
+  "versionType": "FanPort",
+  "tags": [
+    "Super Smash Bros.",
+    "decompilation"
+  ],
+  "platforms": [
+    "Windows",
+    "Linux"
+  ],
+  "videoGame": {
+    "_itemType": "VideoGame",
+    "_itemTitle": "Super Smash Bros. Melee · 2001",
+    "releaseYear": 2001,
+    "title": "Super Smash Bros. Melee",
+    "sortTitle": "Super Smash Bros. 2"
+  },
+  "romDependencies": [
+    {
+      "name": "Super Smash Bros. Melee",
+      "required": true,
+      "options": [
+        {
+          "_itemType": "GameCubeDiscImage",
+          "title": "Super Smash Bros. Melee (USA) (En,Ja) (Rev 2)"
+        }
+      ]
+    }
+  ]
+}

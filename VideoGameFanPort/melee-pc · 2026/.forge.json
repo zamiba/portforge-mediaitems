@@ -1,0 +1,41 @@
+{
+  "uninstallSteps": [
+    { "step": "deletePath", "path": "install" }
+  ],
+  "builds": [
+    {
+      "versions": ["0.1.4-beta"],
+      "targetPlatforms": ["Linux-x64"],
+      "dependencies": [],
+      "steps": [
+        { "step": "createDir", "path": ".build" },
+        {
+          "step": "fetch",
+          "url": "https://github.com/999sian/melee-pc/releases/download/v0.1.4-beta/melee-linux-x86_64.tar.gz",
+          "dest": ".build/melee-linux-x86_64.tar.gz"
+        },
+        { "step": "extract", "src": ".build/melee-linux-x86_64.tar.gz", "dest": ".build" },
+        { "step": "move", "src": ".build/melee-linux-x86_64", "dest": "install" },
+        { "step": "deletePath", "path": ".build" },
+        { "step": "defineExecutable", "executable": "install/melee", "title": "Play", "args": ["${romPath}"] }
+      ]
+    },
+    {
+      "versions": ["0.1.4-beta"],
+      "targetPlatforms": ["Windows-x64"],
+      "dependencies": [],
+      "steps": [
+        { "step": "createDir", "path": ".build" },
+        {
+          "step": "fetch",
+          "url": "https://github.com/999sian/melee-pc/releases/download/v0.1.4-beta/Melee-Windows-x86_64.zip",
+          "dest": ".build/Melee-Windows-x86_64.zip"
+        },
+        { "step": "extract", "src": ".build/Melee-Windows-x86_64.zip", "dest": ".build" },
+        { "step": "move", "src": ".build/melee-windows-x86_64", "dest": "install" },
+        { "step": "deletePath", "path": ".build" },
+        { "step": "defineExecutable", "executable": "install/melee.exe", "title": "Play", "args": ["${romPath}"] }
+      ]
+    }
+  ]
+}

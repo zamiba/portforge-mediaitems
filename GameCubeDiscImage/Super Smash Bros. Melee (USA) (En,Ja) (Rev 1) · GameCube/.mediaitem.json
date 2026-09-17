@@ -1,0 +1,17 @@
+{
+  "_itemType": "GameCubeDiscImage",
+  "title": "Super Smash Bros. Melee (USA) (En,Ja) (Rev 1)",
+  "platform": "GameCube",
+  "formats": [
+    {
+      "filename": "Super Smash Bros. Melee (USA) (En,Ja) (Rev 1).iso",
+      "filesize": 1459978240,
+      "ext": "iso",
+      "checksums": {
+        "md5": "67136bd167b471e0ad72e98d10cf4356",
+        "sha1": "5ecab83cd72c0ff515d750280f92713f19fa46f1",
+        "crc32": "85175e75"
+      }
+    }
+  ]
+}
