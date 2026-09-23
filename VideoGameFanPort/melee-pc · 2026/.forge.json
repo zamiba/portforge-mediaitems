@@ -1,4 +1,8 @@
 {
+  "userDataPaths": [
+    { "locationType": "linuxData", "path": "melee-pc" },
+    { "locationType": "windowsRoaming", "path": "melee-pc" }
+  ],
   "uninstallSteps": [
     { "step": "deletePath", "path": "install" }
   ],

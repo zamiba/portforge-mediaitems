@@ -1,5 +1,10 @@
 {
   "defaultVersion": "1.9",
+  "userDataPaths": [
+    { "locationType": "runDir", "path": "install/save" },
+    { "locationType": "runDir", "path": "install/settings.json" },
+    { "locationType": "runDir", "path": "install/interface.ini" }
+  ],
   "buildPaths": [".build"],
   "uninstallSteps": [
     { "step": "deletePath", "path": "install" }

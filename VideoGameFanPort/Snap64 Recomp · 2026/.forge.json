@@ -1,4 +1,10 @@
 {
+  "userDataPaths": [
+    { "locationType": "runDir", "path": "install/saves" },
+    { "locationType": "runDir", "path": "install/snapsettings.json" },
+    { "locationType": "runDir", "path": "install/photos" },
+    { "locationType": "runDir", "path": "install/stickers" }
+  ],
   "dependencies": [],
   "uninstallSteps": [
     {

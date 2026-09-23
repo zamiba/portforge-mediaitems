@@ -1,5 +1,9 @@
 {
   "defaultVersion": "1.0.0",
+  "userDataPaths": [
+    { "locationType": "runDir", "path": "install/profiles" },
+    { "locationType": "linuxConfig", "path": "reblue/profiles" }
+  ],
   "uninstallSteps": [
     { "step": "deletePath", "path": "install" }
   ],

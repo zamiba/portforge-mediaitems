@@ -82,7 +82,7 @@
           "dest": "./install"
         },
         { "step": "deletePath", "path": "./.build" },
-        { "step": "defineExecutable", "executable": "install/sm64.us.f3dex2e", "title": "Play" }
+        { "step": "defineExecutable", "executable": "install/sm64.us.f3dex2e", "title": "Play", "args": ["--savepath", "${profilePath}"] }
       ]
     }
   ]

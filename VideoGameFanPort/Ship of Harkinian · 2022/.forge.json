@@ -1,4 +1,13 @@
 {
+  "userDataPaths": [
+    { "locationType": "runDir", "path": "install/Save" },
+    { "locationType": "runDir", "path": "install/shipofharkinian.json" },
+    { "locationType": "runDir", "path": "install/imgui.ini" },
+    { "locationType": "runDir", "path": "install/usergamepadmappings.txt" },
+    { "locationType": "runDir", "path": "install/presets" },
+    { "locationType": "runDir", "path": "install/Randomizer" },
+    { "locationType": "runDir", "path": "install/SoHTimeSplitData.json" }
+  ],
   "dependencies": [
     "unzip",
     "7z"

@@ -1,5 +1,14 @@
 {
   "defaultVersion": "1.0.2",
+  "userDataPaths": [
+    { "locationType": "runDir", "path": "install/config/saves" },
+    { "locationType": "runDir", "path": "install/config/achievements.sav" },
+    { "locationType": "runDir", "path": "install/config/settings.cfg" },
+    { "locationType": "runDir", "path": "install/config/custom_levels" },
+    { "locationType": "runDir", "path": "install/config/blueprints" },
+    { "locationType": "runDir", "path": "install/config/screenshots" },
+    { "locationType": "runDir", "path": "install/config/marathon_recordings" }
+  ],
   "dependencies": [],
   "builds": [
     {
@@ -22,8 +31,7 @@
         { "step": "extract", "src": ".build/package.zip", "dest": ".build" },
         { "step": "deletePath", "path": ".build/package.zip" },
         { "step": "copy", "from": "rom", "dest": ".build/config/baserom.nes" },
-        { "step": "touch", "if": "${platform} == Windows", "path": ".build/config/portable.txt" },
-        { "step": "touch", "if": "${platform} != Windows", "path": ".build/portable.txt" },
+        { "step": "touch", "path": ".build/portable.txt" },
         { "step": "move", "src": ".build", "dest": "install" },
         {
           "step": "defineExecutable",
@@ -59,8 +67,7 @@
         { "step": "extract", "src": ".build/package.zip", "dest": ".build" },
         { "step": "deletePath", "path": ".build/package.zip" },
         { "step": "copy", "from": "rom", "dest": ".build/config/baserom.nes" },
-        { "step": "touch", "if": "${platform} == Windows", "path": ".build/config/portable.txt" },
-        { "step": "touch", "if": "${platform} != Windows", "path": ".build/portable.txt" },
+        { "step": "touch", "path": ".build/portable.txt" },
         { "step": "move", "src": ".build", "dest": "install" },
         { "step": "defineExecutable", "if": "${platform} == Windows", "executable": "install/SMB1R.exe", "title": "Play" },
         { "step": "defineExecutable", "if": "${platform} != Windows", "executable": "install/SMB1R.x86_64", "title": "Play" }

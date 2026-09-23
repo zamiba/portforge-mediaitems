@@ -1,7 +1,9 @@
 {
   "defaultVersion": "0.2.55",
   "userDataPaths": [
-    "install/options.lua"
+    { "locationType": "runDir", "path": "install/save.lua" },
+    { "locationType": "runDir", "path": "install/save.lua.bak" },
+    { "locationType": "runDir", "path": "install/options.lua" }
   ],
   "uninstallSteps": [
     { "step": "deletePath", "path": "install" }

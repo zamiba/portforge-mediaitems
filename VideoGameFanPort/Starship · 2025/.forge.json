@@ -1,4 +1,9 @@
 {
+  "userDataPaths": [
+    { "locationType": "runDir", "path": "install/default.sav" },
+    { "locationType": "runDir", "path": "install/starship.cfg.json" },
+    { "locationType": "runDir", "path": "install/imgui.ini" }
+  ],
   "dependencies": ["make", "gcc", "python3", "sdl2-config", "pkg-config", "unzip", "7z"],
   "uninstallSteps": [
     { "step": "deletePath", "path": "install" }

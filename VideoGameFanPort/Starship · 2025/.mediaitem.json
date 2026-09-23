@@ -37,6 +37,19 @@
       ]
     }
   ],
+  "versions": [
+    {
+      "_itemType": "SoftwareVersion",
+      "title": "Barnard Alfa",
+      "notices": [
+        {
+          "type": "warning",
+          "affectedPlatforms": ["Windows"],
+          "message": "Won't launch when the install path contains a non-ASCII character, reporting that its archive cannot be found. A [fix is pending upstream](https://github.com/HarbourMasters/Starship/pull/302); renaming the folder works around it, but that detaches the install from PortForge."
+        }
+      ]
+    }
+  ],
   "artwork": [
     {
       "artworkType": "Cover",

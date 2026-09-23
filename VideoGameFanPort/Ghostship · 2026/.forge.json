@@ -1,4 +1,10 @@
 {
+  "userDataPaths": [
+    { "locationType": "runDir", "path": "install/saves" },
+    { "locationType": "runDir", "path": "install/ghostship.cfg.json" },
+    { "locationType": "runDir", "path": "install/imgui.ini" },
+    { "locationType": "runDir", "path": "install/randomizer" }
+  ],
   "dependencies": ["make", "gcc", "python3", "sdl2-config", "pkg-config", "unzip", "7z"],
   "args": {
     "textureMod": {
@@ -72,6 +78,78 @@
         },
         { "step": "extract", "src": ".build/Mary-Celeste-Alfa-Win64.zip", "dest": ".build" },
         { "step": "deletePath", "path": ".build/Mary-Celeste-Alfa-Win64.zip" },
+        { "step": "deletePath", "path": ".build/debug" },
+        { "step": "copy", "from": "rom", "dest": "./.build/rom.z64" },
+        {
+          "step": "fetch",
+          "if": "${args.textureMod} != none",
+          "url": "https://evilgames.eu/files/texture-packs/sm64-reloaded-v2.6.0-gs-o2r-${args.textureMod}.7z",
+          "dest": "./.build/mods/sm64-reloaded-v2.6.0-gs-o2r-${args.textureMod}.7z"
+        },
+        {
+          "step": "extract",
+          "if": "${args.textureMod} != none",
+          "src": "./.build/mods/sm64-reloaded-v2.6.0-gs-o2r-${args.textureMod}.7z",
+          "dest": ".build/mods"
+        },
+        {
+          "step": "deletePath",
+          "if": "${args.textureMod} != none",
+          "path": "./.build/mods/sm64-reloaded-v2.6.0-gs-o2r-${args.textureMod}.7z"
+        },
+        { "step": "move", "src": "./.build", "dest": "./install" },
+        { "step": "deletePath", "path": "./.build" },
+        { "step": "defineExecutable", "executable": "install/Ghostship.exe", "title": "Play" }
+      ]
+    },
+    {
+      "versions": ["Nautilus - Alfa 3.0.0"],
+      "targetPlatforms": ["Linux"],
+      "steps": [
+        { "step": "createDir", "path": ".build" },
+        {
+          "step": "fetch",
+          "url": "https://github.com/HarbourMasters/Ghostship/releases/download/3.0.0/Nautilus-Alfa-Linux.zip",
+          "dest": ".build/Nautilus-Alfa-Linux.zip"
+        },
+        { "step": "extract", "src": ".build/Nautilus-Alfa-Linux.zip", "dest": ".build" },
+        { "step": "deletePath", "path": ".build/Nautilus-Alfa-Linux.zip" },
+        { "step": "copy", "from": "rom", "dest": "./.build/rom.z64" },
+        {
+          "step": "fetch",
+          "if": "${args.textureMod} != none",
+          "url": "https://evilgames.eu/files/texture-packs/sm64-reloaded-v2.6.0-gs-o2r-${args.textureMod}.7z",
+          "dest": "./.build/mods/sm64-reloaded-v2.6.0-gs-o2r-${args.textureMod}.7z"
+        },
+        {
+          "step": "extract",
+          "if": "${args.textureMod} != none",
+          "src": "./.build/mods/sm64-reloaded-v2.6.0-gs-o2r-${args.textureMod}.7z",
+          "dest": ".build/mods"
+        },
+        {
+          "step": "deletePath",
+          "if": "${args.textureMod} != none",
+          "path": "./.build/mods/sm64-reloaded-v2.6.0-gs-o2r-${args.textureMod}.7z"
+        },
+        { "step": "move", "src": "./.build", "dest": "./install" },
+        { "step": "deletePath", "path": "./.build" },
+        { "step": "defineExecutable", "executable": "install/ghostship.appimage", "title": "Play" }
+      ]
+    },
+    {
+      "versions": ["Nautilus - Alfa 3.0.0"],
+      "targetPlatforms": ["Windows"],
+      "dependencies": [],
+      "steps": [
+        { "step": "createDir", "path": ".build" },
+        {
+          "step": "fetch",
+          "url": "https://github.com/HarbourMasters/Ghostship/releases/download/3.0.0/Nautilus-Alfa-Win64.zip",
+          "dest": ".build/Nautilus-Alfa-Win64.zip"
+        },
+        { "step": "extract", "src": ".build/Nautilus-Alfa-Win64.zip", "dest": ".build" },
+        { "step": "deletePath", "path": ".build/Nautilus-Alfa-Win64.zip" },
         { "step": "deletePath", "path": ".build/debug" },
         { "step": "copy", "from": "rom", "dest": "./.build/rom.z64" },
         {

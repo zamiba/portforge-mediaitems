@@ -37,6 +37,30 @@
       ]
     }
   ],
+  "versions": [
+    {
+      "_itemType": "SoftwareVersion",
+      "title": "Nautilus - Alfa 3.0.0",
+      "notices": [
+        {
+          "type": "warning",
+          "affectedPlatforms": ["Windows"],
+          "message": "Won't launch when the install path contains a non-ASCII character, reporting `Main OTR file not found`. A [fix is pending upstream](https://github.com/HarbourMasters/Ghostship/pull/279); renaming the folder works around it, but that detaches the install from PortForge."
+        }
+      ]
+    },
+    {
+      "_itemType": "SoftwareVersion",
+      "title": "Mary Celeste - Alfa 2.0.0",
+      "notices": [
+        {
+          "type": "warning",
+          "affectedPlatforms": ["Windows"],
+          "message": "Won't launch when the install path contains a non-ASCII character, reporting `Main OTR file not found`. A [fix is pending upstream](https://github.com/HarbourMasters/Ghostship/pull/279); renaming the folder works around it, but that detaches the install from PortForge."
+        }
+      ]
+    }
+  ],
   "artwork": [
     {
       "artworkType": "Cover",

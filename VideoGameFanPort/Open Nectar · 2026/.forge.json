@@ -1,7 +1,7 @@
 {
   "userDataPaths": [
-    "install/save",
-    "install/pikmin_settings.conf"
+    { "locationType": "runDir", "path": "install/save" },
+    { "locationType": "runDir", "path": "install/pikmin_settings.conf" }
   ],
   "uninstallSteps": [
     { "step": "deletePath", "path": "install" }

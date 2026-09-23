@@ -1,4 +1,11 @@
 {
+  "userDataPaths": [
+    { "locationType": "runDir", "path": "install/default.sav" },
+    { "locationType": "runDir", "path": "install/controllerPak_header.sav" },
+    { "locationType": "runDir", "path": "install/controllerPak_file_0.sav" },
+    { "locationType": "runDir", "path": "install/spaghettify.cfg.json" },
+    { "locationType": "runDir", "path": "install/imgui.ini" }
+  ],
   "dependencies": ["unzip", "7z"],
   "args": {
     "textureMod": {
