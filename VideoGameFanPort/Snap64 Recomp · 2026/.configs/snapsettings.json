@@ -1,0 +1,553 @@
+{
+  "title": "Settings",
+  "path": "install/snapsettings.json",
+  "format": "json",
+  "sections": [
+    {
+      "title": "Graphics",
+      "fields": [
+        {
+          "pointer": "widescreen",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Widescreen",
+          "help": "A true 16:9 field of view, not a stretch.",
+          "default": false
+        },
+        {
+          "pointer": "resolution_scale",
+          "kind": "int",
+          "widget": "number",
+          "label": "Render scale",
+          "help": "Multiples of the game's 320×240. Zero follows the window.",
+          "default": 0,
+          "min": 0,
+          "max": 8,
+          "step": 1,
+          "unit": "×"
+        },
+        {
+          "pointer": "msaa",
+          "kind": "int",
+          "widget": "select",
+          "label": "Anti-aliasing",
+          "options": [
+            {
+              "label": "Off",
+              "value": 0
+            },
+            {
+              "label": "2×",
+              "value": 2
+            },
+            {
+              "label": "4×",
+              "value": 4
+            },
+            {
+              "label": "8×",
+              "value": 8
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "downsample",
+          "kind": "int",
+          "widget": "number",
+          "label": "Downsampling",
+          "help": "Renders above the output size and scales down. 1 is off.",
+          "default": 1,
+          "min": 1,
+          "max": 8,
+          "step": 1,
+          "unit": "×"
+        },
+        {
+          "pointer": "present_filter",
+          "kind": "int",
+          "widget": "select",
+          "label": "Presentation filter",
+          "help": "How the finished frame is put on screen.",
+          "options": [
+            {
+              "label": "Nearest",
+              "value": 0
+            },
+            {
+              "label": "Linear",
+              "value": 1
+            },
+            {
+              "label": "Anti-aliased",
+              "value": 2
+            }
+          ],
+          "default": 2
+        },
+        {
+          "pointer": "upscale_2d",
+          "kind": "int",
+          "widget": "select",
+          "label": "2D upscaling",
+          "options": [
+            {
+              "label": "Original pixels",
+              "value": 0
+            },
+            {
+              "label": "Only scaling content",
+              "value": 1
+            },
+            {
+              "label": "Everything",
+              "value": 2
+            }
+          ],
+          "default": 1
+        },
+        {
+          "pointer": "three_point_filtering",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Three-point filtering",
+          "default": true
+        },
+        {
+          "pointer": "dither_noise",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Dither noise",
+          "help": "The console's own post-blend noise.",
+          "default": true
+        },
+        {
+          "pointer": "color_depth",
+          "kind": "int",
+          "widget": "select",
+          "label": "Colour depth",
+          "help": "Read once at start-up.",
+          "options": [
+            {
+              "label": "Automatic",
+              "value": 0
+            },
+            {
+              "label": "8-bit",
+              "value": 1
+            },
+            {
+              "label": "High precision",
+              "value": 2
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "triple_buffering",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Triple buffering",
+          "help": "Steadier frame delivery for a little latency. Read once at start-up.",
+          "default": false
+        },
+        {
+          "pointer": "graphics_api",
+          "kind": "int",
+          "widget": "select",
+          "label": "Graphics API",
+          "help": "Read once at start-up. Vulkan is the Linux build's only backend.",
+          "options": [
+            {
+              "label": "Direct3D 12",
+              "value": 0
+            },
+            {
+              "label": "Vulkan",
+              "value": 1
+            }
+          ],
+          "default": 0
+        }
+      ]
+    },
+    {
+      "title": "Frame rate",
+      "fields": [
+        {
+          "pointer": "fps_mode",
+          "kind": "int",
+          "widget": "select",
+          "label": "Frame rate",
+          "help": "Original is the console's own rate.",
+          "options": [
+            {
+              "label": "Original",
+              "value": 0
+            },
+            {
+              "label": "Display refresh",
+              "value": 1
+            },
+            {
+              "label": "Manual",
+              "value": 2
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "fps_manual_target",
+          "kind": "int",
+          "widget": "number",
+          "label": "Manual frame rate",
+          "help": "Only used while Frame rate is Manual.",
+          "default": 120,
+          "min": 20,
+          "max": 480,
+          "step": 1,
+          "unit": "fps"
+        },
+        {
+          "pointer": "interpolate_camera",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Interpolate the camera",
+          "default": true
+        }
+      ]
+    },
+    {
+      "title": "Sound",
+      "fields": [
+        {
+          "pointer": "master_volume",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Master volume",
+          "default": 100,
+          "min": 0,
+          "max": 100,
+          "step": 10,
+          "unit": "%"
+        },
+        {
+          "pointer": "music_volume",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Music volume",
+          "default": 100,
+          "min": 0,
+          "max": 100,
+          "step": 10,
+          "unit": "%"
+        },
+        {
+          "pointer": "sfx_volume",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Sound effects volume",
+          "default": 100,
+          "min": 0,
+          "max": 100,
+          "step": 10,
+          "unit": "%"
+        },
+        {
+          "pointer": "shutter_volume",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Shutter volume",
+          "default": 100,
+          "min": 0,
+          "max": 100,
+          "step": 10,
+          "unit": "%"
+        },
+        {
+          "pointer": "stereo",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Stereo",
+          "help": "Off averages every left and right pair, as the cartridge's mono setting does.",
+          "default": true
+        },
+        {
+          "pointer": "mute_unfocused",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Mute when unfocused",
+          "default": false
+        }
+      ]
+    },
+    {
+      "title": "Picture",
+      "fields": [
+        {
+          "pointer": "crop_enabled",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Overscan crop",
+          "help": "Hides the dead margins the game never draws into, for the classic safe area.",
+          "default": false
+        },
+        {
+          "pointer": "crop_left",
+          "kind": "int",
+          "widget": "number",
+          "label": "Crop left",
+          "default": 16,
+          "min": 0,
+          "max": 48,
+          "step": 1,
+          "unit": "px"
+        },
+        {
+          "pointer": "crop_right",
+          "kind": "int",
+          "widget": "number",
+          "label": "Crop right",
+          "default": 16,
+          "min": 0,
+          "max": 48,
+          "step": 1,
+          "unit": "px"
+        },
+        {
+          "pointer": "crop_top",
+          "kind": "int",
+          "widget": "number",
+          "label": "Crop top",
+          "default": 12,
+          "min": 0,
+          "max": 48,
+          "step": 1,
+          "unit": "px"
+        },
+        {
+          "pointer": "crop_bottom",
+          "kind": "int",
+          "widget": "number",
+          "label": "Crop bottom",
+          "default": 12,
+          "min": 0,
+          "max": 48,
+          "step": 1,
+          "unit": "px"
+        },
+        {
+          "pointer": "photo_detail",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Sharp photos",
+          "help": "Shows a taken photo at the renderer's own resolution rather than the console's halved bitmap.",
+          "default": false
+        },
+        {
+          "pointer": "jynx_vc",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Jynx recolour",
+          "help": "Draws Jynx purple, as every release since the 2007 Virtual Console does.",
+          "default": false
+        },
+        {
+          "pointer": "intro_fix",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Intro camera fix",
+          "help": "Ends the Beach and River intro eases before the frame drawn from inside Todd's head.",
+          "default": false
+        }
+      ]
+    },
+    {
+      "title": "Controls",
+      "fields": [
+        {
+          "pointer": "mouse_aim",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Mouse aiming",
+          "default": true
+        },
+        {
+          "pointer": "mouse_sensitivity",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Mouse speed",
+          "default": 1.0,
+          "min": 0.1,
+          "max": 10.0,
+          "step": 0.1,
+          "unit": "×"
+        },
+        {
+          "pointer": "mouse_zoom_speed",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Mouse speed while zoomed",
+          "help": "A share of the mouse speed above.",
+          "default": 0.5,
+          "min": 0.25,
+          "max": 1.0,
+          "step": 0.05,
+          "unit": "×"
+        },
+        {
+          "pointer": "mouse_invert_y",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Invert mouse Y",
+          "default": false
+        },
+        {
+          "pointer": "gyro_aim",
+          "kind": "int",
+          "widget": "select",
+          "label": "Gyro aiming",
+          "options": [
+            {
+              "label": "Off",
+              "value": 0
+            },
+            {
+              "label": "Always in a course",
+              "value": 1
+            },
+            {
+              "label": "Only while zoomed",
+              "value": 2
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "gyro_sensitivity",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Gyro speed",
+          "default": 1.0,
+          "min": 0.25,
+          "max": 4.0,
+          "step": 0.25,
+          "unit": "×"
+        },
+        {
+          "pointer": "pad_enabled",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Use controllers",
+          "default": true
+        },
+        {
+          "pointer": "pad_layout",
+          "kind": "int",
+          "widget": "select",
+          "label": "Controller layout",
+          "help": "How the shoulders and triggers are read.",
+          "options": [
+            {
+              "label": "By the pad's name",
+              "value": 0
+            },
+            {
+              "label": "Xbox-style",
+              "value": 1
+            },
+            {
+              "label": "N64-style",
+              "value": 2
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "pad_sticks_swapped",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Swap the sticks",
+          "help": "Aims with the right stick and works the C buttons with the left.",
+          "default": false,
+          "sinceVersion": "1.0.6"
+        },
+        {
+          "pointer": "pad_deadzone",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Stick deadzone",
+          "default": 15,
+          "min": 0,
+          "max": 40,
+          "step": 5,
+          "unit": "%",
+          "sinceVersion": "1.0.6"
+        },
+        {
+          "pointer": "fast_forward_speed",
+          "kind": "int",
+          "widget": "select",
+          "label": "Fast forward",
+          "help": "How much faster the game runs while the fast-forward key is held.",
+          "options": [
+            {
+              "label": "Off",
+              "value": 1
+            },
+            {
+              "label": "2×",
+              "value": 2
+            },
+            {
+              "label": "3×",
+              "value": 3
+            },
+            {
+              "label": "4×",
+              "value": 4
+            }
+          ],
+          "default": 3,
+          "sinceVersion": "1.0.8"
+        },
+        {
+          "pointer": "slow_motion_speed",
+          "kind": "int",
+          "widget": "select",
+          "label": "Slow motion",
+          "help": "How much slower the game runs while the slow-motion key is held.",
+          "options": [
+            {
+              "label": "Off",
+              "value": 1
+            },
+            {
+              "label": "Half speed",
+              "value": 2
+            },
+            {
+              "label": "Quarter speed",
+              "value": 4
+            }
+          ],
+          "default": 1,
+          "sinceVersion": "1.0.8"
+        }
+      ]
+    },
+    {
+      "title": "Extras",
+      "fields": [
+        {
+          "pointer": "snap_station",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Snap Station",
+          "help": "Attaches the Blockbuster kiosk's sticker printer to port four, adding Print to the Gallery.",
+          "default": false
+        }
+      ]
+    }
+  ]
+}

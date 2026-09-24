@@ -1,0 +1,35 @@
+{
+  "title": "Sound",
+  "order": 3,
+  "path": "install/sound.json",
+  "format": "json",
+  "sections": [
+    {
+      "title": "Volume",
+      "fields": [
+        {
+          "pointer": "main_volume",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Main volume",
+          "default": 100,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        {
+          "pointer": "bgm_volume",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Background music volume",
+          "default": 100,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        }
+      ]
+    }
+  ]
+}

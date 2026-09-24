@@ -1,0 +1,351 @@
+{
+  "title": "Settings",
+  "path": "install/starship.cfg.json",
+  "format": "json",
+  "sections": [
+    {
+      "title": "Window",
+      "help": "Written when the game quits. The size is remembered only from a windowed session.",
+      "fields": [
+        {
+          "pointer": "Window.Width",
+          "kind": "int",
+          "widget": "number",
+          "label": "Window width",
+          "default": 640,
+          "min": 320,
+          "max": 7680,
+          "step": 1,
+          "unit": "px"
+        },
+        {
+          "pointer": "Window.Height",
+          "kind": "int",
+          "widget": "number",
+          "label": "Window height",
+          "default": 480,
+          "min": 240,
+          "max": 4320,
+          "step": 1,
+          "unit": "px"
+        },
+        {
+          "pointer": "Window.Fullscreen.Enabled",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Start fullscreen",
+          "default": false
+        },
+        {
+          "pointer": "Window.AudioBackend",
+          "kind": "string",
+          "widget": "select",
+          "label": "Audio output",
+          "help": "SDL works everywhere; WASAPI is Windows only and Core Audio is macOS only.",
+          "options": [
+            {
+              "label": "SDL",
+              "value": "sdl"
+            },
+            {
+              "label": "WASAPI (Windows)",
+              "value": "wasapi"
+            },
+            {
+              "label": "Core Audio (macOS)",
+              "value": "coreaudio"
+            },
+            {
+              "label": "None",
+              "value": "null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Graphics",
+      "fields": [
+        {
+          "pointer": "CVars.gVsyncEnabled",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "V-sync",
+          "help": "Removes tearing, but caps the frame rate at the display's refresh rate.",
+          "on": 1,
+          "off": 0,
+          "default": 1
+        },
+        {
+          "pointer": "CVars.gInternalResolution",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Internal resolution",
+          "help": "Renders at a multiple of the output resolution as a form of anti-aliasing.",
+          "default": 1.0,
+          "min": 0.5,
+          "max": 2.0,
+          "step": 0.1,
+          "unit": "×"
+        },
+        {
+          "pointer": "CVars.gMSAAValue",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Anti-aliasing (MSAA)",
+          "help": "Samples per pixel, from 1 (off) to 8.",
+          "default": 1,
+          "min": 1,
+          "max": 8,
+          "step": 1,
+          "unit": "×"
+        },
+        {
+          "pointer": "CVars.gTextureFilter",
+          "kind": "int",
+          "widget": "select",
+          "label": "Texture filter",
+          "help": "Takes effect the next time the game starts.",
+          "options": [
+            {
+              "label": "Three-point",
+              "value": 0
+            },
+            {
+              "label": "Linear",
+              "value": 1
+            },
+            {
+              "label": "None",
+              "value": 2
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "CVars.gMatchRefreshRate",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Match refresh rate",
+          "help": "Follows the display's refresh rate instead of the frame rate below.",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "CVars.gInterpolationFPS",
+          "kind": "int",
+          "widget": "number",
+          "label": "Frame rate",
+          "help": "Frames the game interpolates to. Ignored while Match refresh rate is on.",
+          "default": 60,
+          "min": 20,
+          "max": 360,
+          "step": 1,
+          "unit": "fps"
+        },
+        {
+          "pointer": "CVars.gLowResMode",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "N64 mode",
+          "help": "Renders at the console's own resolution.",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "CVars.gDisableLOD",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "No level of detail",
+          "help": "Always draws models at their highest detail.",
+          "on": 1,
+          "off": 0,
+          "default": 1
+        },
+        {
+          "pointer": "CVars.gGraphics.GammaMode",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Disable gamma boost",
+          "help": "Takes effect the next time the game starts.",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "CVars.gDisableStarsInterpolation",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Disable starfield interpolation",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        }
+      ]
+    },
+    {
+      "title": "Audio",
+      "fields": [
+        {
+          "pointer": "CVars.gGameMasterVolume",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Master volume",
+          "default": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "step": 0.05
+        },
+        {
+          "pointer": "CVars.gMainMusicVolume",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Music volume",
+          "default": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "step": 0.05
+        },
+        {
+          "pointer": "CVars.gSFXMusicVolume",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Sound effects volume",
+          "default": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "step": 0.05
+        },
+        {
+          "pointer": "CVars.gVoiceVolume",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Voice volume",
+          "default": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "step": 0.05
+        },
+        {
+          "pointer": "CVars.gVolumeRearMusic",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Rear music volume",
+          "default": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "step": 0.05
+        },
+        {
+          "pointer": "CVars.gVoiceLanguage",
+          "kind": "int",
+          "widget": "radio",
+          "label": "Voices",
+          "options": [
+            {
+              "label": "Original",
+              "value": 0
+            },
+            {
+              "label": "Lylat",
+              "value": 1
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "CVars.gSubwooferThreshold",
+          "kind": "int",
+          "widget": "number",
+          "label": "Subwoofer threshold",
+          "default": 80,
+          "min": 10,
+          "max": 1000,
+          "step": 1,
+          "unit": "Hz"
+        }
+      ]
+    },
+    {
+      "title": "Gameplay",
+      "fields": [
+        {
+          "pointer": "CVars.gInvertYAxis",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Invert Y axis",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "CVars.gTeamFaces",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Always show pilot faces",
+          "help": "Keeps the character heads inside the Arwings at all times.",
+          "on": 1,
+          "off": 0,
+          "default": 1
+        },
+        {
+          "pointer": "CVars.gEnemyRedRadio",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Red radio backgrounds for enemies",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "CVars.gFighterOutlines",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Outline fighters on the radar",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "CVars.gDisableGorgonFlash",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Disable Gorgon screen flashes",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "CVars.gCockpitOpacity",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Cockpit glass opacity",
+          "default": 120,
+          "min": 0,
+          "max": 255,
+          "step": 1
+        },
+        {
+          "pointer": "CVars.gSkipBriefing",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Skip mission briefings",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "CVars.gForceExpertMode",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Expert mode",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        }
+      ]
+    }
+  ]
+}

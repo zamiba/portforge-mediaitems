@@ -1,0 +1,180 @@
+{
+  "title": "General",
+  "order": 1,
+  "path": "install/general.json",
+  "format": "json",
+  "sections": [
+    {
+      "title": "Input",
+      "fields": [
+        {
+          "pointer": "rumble_strength",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Rumble strength",
+          "help": "Zero turns rumble off.",
+          "default": 25,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        {
+          "pointer": "joystick_deadzone",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Joystick deadzone",
+          "default": 5,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        {
+          "pointer": "background_input_mode",
+          "kind": "string",
+          "widget": "toggle",
+          "label": "Background input",
+          "help": "Lets the game read a controller while another window has focus. Keyboard input is unaffected.",
+          "on": "On",
+          "off": "Off",
+          "default": "On"
+        }
+      ]
+    },
+    {
+      "title": "Camera",
+      "fields": [
+        {
+          "pointer": "analog_cam_mode",
+          "kind": "string",
+          "widget": "toggle",
+          "label": "Analog camera",
+          "on": "On",
+          "off": "Off",
+          "default": "Off"
+        },
+        {
+          "pointer": "analog_camera_sensitivity",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Analog camera sensitivity",
+          "help": "Only used while the analog camera is on.",
+          "default": 3,
+          "min": 1,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "pointer": "third_person_camera_invert_mode",
+          "kind": "string",
+          "widget": "select",
+          "label": "Invert camera",
+          "help": "Invert X matches the original game. With the analog camera off, only Invert X has any effect.",
+          "options": [
+            {
+              "label": "None",
+              "value": "InvertNone"
+            },
+            {
+              "label": "Invert X",
+              "value": "InvertX"
+            },
+            {
+              "label": "Invert Y",
+              "value": "InvertY"
+            },
+            {
+              "label": "Invert both",
+              "value": "InvertBoth"
+            }
+          ],
+          "default": "InvertX"
+        },
+        {
+          "pointer": "first_person_invert_mode",
+          "kind": "string",
+          "widget": "select",
+          "label": "Invert first-person view",
+          "help": "Invert Y matches the original game.",
+          "options": [
+            {
+              "label": "None",
+              "value": "InvertNone"
+            },
+            {
+              "label": "Invert X",
+              "value": "InvertX"
+            },
+            {
+              "label": "Invert Y",
+              "value": "InvertY"
+            },
+            {
+              "label": "Invert both",
+              "value": "InvertBoth"
+            }
+          ],
+          "default": "InvertY"
+        },
+        {
+          "pointer": "flying_and_swimming_invert_mode",
+          "kind": "string",
+          "widget": "select",
+          "label": "Invert flying and swimming",
+          "help": "Invert Y matches the original game.",
+          "options": [
+            {
+              "label": "None",
+              "value": "InvertNone"
+            },
+            {
+              "label": "Invert X",
+              "value": "InvertX"
+            },
+            {
+              "label": "Invert Y",
+              "value": "InvertY"
+            },
+            {
+              "label": "Invert both",
+              "value": "InvertBoth"
+            }
+          ],
+          "default": "InvertY"
+        }
+      ]
+    },
+    {
+      "title": "Saving",
+      "fields": [
+        {
+          "pointer": "note_saving_mode",
+          "kind": "string",
+          "widget": "select",
+          "label": "Note and Jinjo saving",
+          "help": "Keeps collected notes and jinjos between visits. Off matches the original game. Takes effect on entering or leaving a level.",
+          "options": [
+            {
+              "label": "Both",
+              "value": "On"
+            },
+            {
+              "label": "Only notes",
+              "value": "Notes"
+            },
+            {
+              "label": "Only jinjos",
+              "value": "Jinjos"
+            },
+            {
+              "label": "Off",
+              "value": "Off"
+            }
+          ],
+          "default": "On"
+        }
+      ]
+    }
+  ]
+}

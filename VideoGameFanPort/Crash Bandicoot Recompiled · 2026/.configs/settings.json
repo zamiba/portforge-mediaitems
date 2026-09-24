@@ -1,0 +1,56 @@
+{
+  "title": "Game",
+  "order": 1,
+  "path": "install/settings.json",
+  "format": "json",
+  "sections": [
+    {
+      "title": "Audio",
+      "fields": [
+        {
+          "pointer": "MasterVolume",
+          "kind": "number",
+          "widget": "slider",
+          "label": "Master volume",
+          "default": 1.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.05
+        },
+        {
+          "pointer": "Muted",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Mute",
+          "default": false
+        }
+      ]
+    },
+    {
+      "title": "Game data",
+      "fields": [
+        {
+          "pointer": "CdPath",
+          "kind": "string",
+          "widget": "path",
+          "label": "Disc image",
+          "help": "The disc the game runs from. Left empty, the launcher looks for one itself.",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "title": "Mods",
+      "fields": [
+        {
+          "pointer": "AssetHotWatch",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Reload mods while running",
+          "help": "Watches mods/ for texture, disc and mod.json changes and applies them without a restart.",
+          "default": true
+        }
+      ]
+    }
+  ]
+}

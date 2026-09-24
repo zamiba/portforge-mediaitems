@@ -1,0 +1,186 @@
+{
+  "title": "Display",
+  "order": 2,
+  "path": "install/interface.ini",
+  "format": "ini",
+  "sections": [
+    {
+      "title": "Window",
+      "fields": [
+        {
+          "pointer": "RecompOne.Fullscreen",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Fullscreen",
+          "default": false
+        },
+        {
+          "pointer": "RecompOne.HideTopBar",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Hide the menu bar",
+          "default": false
+        },
+        {
+          "pointer": "RecompOne.VSync",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "V-sync",
+          "default": false
+        },
+        {
+          "pointer": "RecompOne.IntegerScale",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Integer scaling",
+          "default": false
+        },
+        {
+          "pointer": "RecompOne.Widescreen",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Widescreen",
+          "default": false
+        }
+      ]
+    },
+    {
+      "title": "Rendering",
+      "fields": [
+        {
+          "pointer": "RecompOne.InternalResolution",
+          "kind": "int",
+          "widget": "select",
+          "label": "Internal resolution",
+          "help": "1 is the console's own. Takes effect the next time the game starts, because the textures are allocated at start-up.",
+          "options": [
+            {
+              "label": "Native (1×)",
+              "value": 1
+            },
+            {
+              "label": "2×",
+              "value": 2
+            },
+            {
+              "label": "4×",
+              "value": 4
+            },
+            {
+              "label": "8× (≈4K)",
+              "value": 8
+            }
+          ],
+          "default": 4
+        },
+        {
+          "pointer": "RecompOne.FrameRate",
+          "kind": "int",
+          "widget": "select",
+          "label": "Frame rate",
+          "help": "Menus stay at 30 whatever this says.",
+          "options": [
+            {
+              "label": "Original (30 fps)",
+              "value": 0
+            },
+            {
+              "label": "60 fps",
+              "value": 60
+            },
+            {
+              "label": "120 fps",
+              "value": 120
+            },
+            {
+              "label": "240 fps",
+              "value": 240
+            },
+            {
+              "label": "Uncapped",
+              "value": -1
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "RecompOne.TextureFilter",
+          "kind": "int",
+          "widget": "select",
+          "label": "Texture filter",
+          "help": "Turned off by itself on the title, menu, map and cinema screens.",
+          "options": [
+            {
+              "label": "Off",
+              "value": 0
+            },
+            {
+              "label": "Bilinear",
+              "value": 1
+            },
+            {
+              "label": "Sharp bilinear",
+              "value": 2
+            },
+            {
+              "label": "Soft smooth",
+              "value": 3
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "RecompOne.TextureFilterStrength",
+          "kind": "number",
+          "widget": "slider",
+          "label": "Filter strength",
+          "help": "Blend of the filtered image against the raw pixels.",
+          "default": 0.5,
+          "min": 0,
+          "max": 1,
+          "step": 0.05
+        },
+        {
+          "pointer": "RecompOne.PresentNearest",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Nearest-neighbour presentation",
+          "default": false
+        },
+        {
+          "pointer": "RecompOne.Dedither",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Remove dithering",
+          "default": false
+        },
+        {
+          "pointer": "RecompOne.Dejitter",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Remove jitter",
+          "default": false
+        }
+      ]
+    },
+    {
+      "title": "Overlay",
+      "fields": [
+        {
+          "pointer": "RecompOne.ShowDevHud",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Developer HUD",
+          "default": false
+        },
+        {
+          "pointer": "RecompOne.FrameRateHotkeys",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Frame-rate hotkeys",
+          "default": true
+        }
+      ]
+    }
+  ]
+}

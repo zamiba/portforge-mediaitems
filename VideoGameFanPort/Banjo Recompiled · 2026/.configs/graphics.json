@@ -1,0 +1,206 @@
+{
+  "title": "Graphics",
+  "order": 2,
+  "path": "install/graphics.json",
+  "format": "json",
+  "sections": [
+    {
+      "title": "Display",
+      "fields": [
+        {
+          "pointer": "wm_option",
+          "kind": "string",
+          "widget": "select",
+          "label": "Window mode",
+          "help": "The game defaults to fullscreen on a Steam Deck and windowed everywhere else.",
+          "options": [
+            {
+              "label": "Windowed",
+              "value": "Windowed"
+            },
+            {
+              "label": "Fullscreen",
+              "value": "Fullscreen"
+            }
+          ],
+          "default": "Windowed"
+        },
+        {
+          "pointer": "res_option",
+          "kind": "string",
+          "widget": "select",
+          "label": "Resolution",
+          "help": "Original is the game's own 240p and Original 2x is 480p. Auto follows the window.",
+          "options": [
+            {
+              "label": "Original",
+              "value": "Original"
+            },
+            {
+              "label": "Original 2x",
+              "value": "Original2x"
+            },
+            {
+              "label": "Auto",
+              "value": "Auto"
+            }
+          ],
+          "default": "Auto"
+        },
+        {
+          "pointer": "ar_option",
+          "kind": "string",
+          "widget": "select",
+          "label": "Aspect ratio",
+          "help": "Original keeps the game's 4:3. Expand follows the window.",
+          "options": [
+            {
+              "label": "Original",
+              "value": "Original"
+            },
+            {
+              "label": "Expand",
+              "value": "Expand"
+            }
+          ],
+          "default": "Expand"
+        },
+        {
+          "pointer": "hr_option",
+          "kind": "string",
+          "widget": "select",
+          "label": "HUD placement",
+          "options": [
+            {
+              "label": "Original",
+              "value": "Original"
+            },
+            {
+              "label": "16:9",
+              "value": "Clamp16x9"
+            },
+            {
+              "label": "Expand",
+              "value": "Expand"
+            }
+          ],
+          "default": "Clamp16x9"
+        }
+      ]
+    },
+    {
+      "title": "Quality",
+      "fields": [
+        {
+          "pointer": "msaa_option",
+          "kind": "string",
+          "widget": "select",
+          "label": "Anti-aliasing",
+          "help": "Unavailable on a GPU without programmable MSAA sample positions.",
+          "options": [
+            {
+              "label": "None",
+              "value": "None"
+            },
+            {
+              "label": "2×",
+              "value": "MSAA2X"
+            },
+            {
+              "label": "4×",
+              "value": "MSAA4X"
+            }
+          ],
+          "default": "MSAA2X"
+        },
+        {
+          "pointer": "ds_option",
+          "kind": "string",
+          "widget": "select",
+          "label": "Downsampling",
+          "help": "Renders higher and scales down. Only used at Original and Original 2x resolution.",
+          "options": [
+            {
+              "label": "Off",
+              "value": "Off"
+            },
+            {
+              "label": "2×",
+              "value": "2x"
+            },
+            {
+              "label": "4×",
+              "value": "4x"
+            }
+          ],
+          "default": "Off"
+        }
+      ]
+    },
+    {
+      "title": "Frame rate",
+      "fields": [
+        {
+          "pointer": "rr_option",
+          "kind": "string",
+          "widget": "select",
+          "label": "Frame rate",
+          "options": [
+            {
+              "label": "Original",
+              "value": "Original"
+            },
+            {
+              "label": "Display",
+              "value": "Display"
+            },
+            {
+              "label": "Manual",
+              "value": "Manual"
+            }
+          ],
+          "default": "Display"
+        },
+        {
+          "pointer": "rr_manual_value",
+          "kind": "int",
+          "widget": "number",
+          "label": "Manual frame rate",
+          "help": "Only used while Frame rate is Manual.",
+          "default": 60,
+          "min": 20,
+          "max": 240,
+          "step": 1,
+          "unit": "fps"
+        }
+      ]
+    },
+    {
+      "title": "Game",
+      "fields": [
+        {
+          "pointer": "cutscene_aspect_ratio_mode",
+          "kind": "string",
+          "widget": "select",
+          "label": "Cutscene aspect ratio",
+          "help": "Cutscenes were adjusted for 16:9. Wider ratios can show what was never meant to be on screen.",
+          "options": [
+            {
+              "label": "Original",
+              "value": "Original"
+            },
+            {
+              "label": "16:9",
+              "value": "Clamp16x9"
+            },
+            {
+              "label": "Expand",
+              "value": "Expand"
+            }
+          ],
+          "default": "Clamp16x9"
+        }
+      ]
+    }
+  ]
+}

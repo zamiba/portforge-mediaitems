@@ -1,0 +1,778 @@
+{
+  "title": "Settings",
+  "path": "install/pikmin_settings.conf",
+  "format": "ini",
+  "sections": [
+    {
+      "title": "Display",
+      "fields": [
+        {
+          "pointer": "windowWidth",
+          "kind": "int",
+          "widget": "number",
+          "label": "Window width",
+          "default": 1280,
+          "min": 320,
+          "max": 7680,
+          "step": 1,
+          "unit": "px"
+        },
+        {
+          "pointer": "windowHeight",
+          "kind": "int",
+          "widget": "number",
+          "label": "Window height",
+          "default": 720,
+          "min": 240,
+          "max": 4320,
+          "step": 1,
+          "unit": "px"
+        },
+        {
+          "pointer": "displayMode",
+          "kind": "int",
+          "widget": "select",
+          "label": "Display mode",
+          "options": [
+            {
+              "label": "Fullscreen windowed",
+              "value": 0
+            },
+            {
+              "label": "Fullscreen exclusive",
+              "value": 1
+            },
+            {
+              "label": "Borderless",
+              "value": 2
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "aspectRatioMode",
+          "kind": "int",
+          "widget": "select",
+          "label": "Aspect ratio",
+          "options": [
+            {
+              "label": "Auto",
+              "value": 0
+            },
+            {
+              "label": "4:3",
+              "value": 1
+            },
+            {
+              "label": "16:10",
+              "value": 2
+            },
+            {
+              "label": "16:9",
+              "value": 3
+            },
+            {
+              "label": "21:9",
+              "value": 4
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "refreshRate",
+          "kind": "number",
+          "widget": "number",
+          "label": "Refresh rate",
+          "help": "Zero detects the display's own.",
+          "default": 0,
+          "min": 0,
+          "max": 480,
+          "step": 1,
+          "unit": "Hz"
+        },
+        {
+          "pointer": "vsync",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "V-sync",
+          "on": 1,
+          "off": 0,
+          "default": 1
+        },
+        {
+          "pointer": "fpsMode",
+          "kind": "int",
+          "widget": "select",
+          "label": "Frame rate",
+          "options": [
+            {
+              "label": "30 fps",
+              "value": 0
+            },
+            {
+              "label": "60 fps",
+              "value": 1
+            },
+            {
+              "label": "120 fps (experimental)",
+              "value": 2
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "renderScale",
+          "kind": "number",
+          "widget": "slider",
+          "label": "Render scale",
+          "help": "The 3D resolution as a share of the window. Two thirds is what the port ships with.",
+          "default": 0.666667,
+          "min": 0.25,
+          "max": 4.0,
+          "step": 0.05,
+          "unit": "×"
+        },
+        {
+          "pointer": "language",
+          "kind": "string",
+          "widget": "select",
+          "label": "Language",
+          "help": "Chosen by the installer; nothing in the game changes it yet.",
+          "options": [
+            {
+              "label": "English",
+              "value": "en"
+            },
+            {
+              "label": "German",
+              "value": "de"
+            },
+            {
+              "label": "French",
+              "value": "fr"
+            },
+            {
+              "label": "Spanish",
+              "value": "es"
+            },
+            {
+              "label": "Italian",
+              "value": "it"
+            },
+            {
+              "label": "Dutch",
+              "value": "nl"
+            }
+          ],
+          "default": "en"
+        }
+      ]
+    },
+    {
+      "title": "Picture",
+      "fields": [
+        {
+          "pointer": "antialiasing",
+          "kind": "int",
+          "widget": "select",
+          "label": "Anti-aliasing",
+          "options": [
+            {
+              "label": "Off",
+              "value": 0
+            },
+            {
+              "label": "FXAA",
+              "value": 1
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "fog",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Fog",
+          "help": "The game's own fog.",
+          "on": 1,
+          "off": 0,
+          "default": 1
+        },
+        {
+          "pointer": "perPixelLighting",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Per-pixel lighting",
+          "help": "Off is the GameCube's per-vertex lighting.",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "shadows",
+          "kind": "int",
+          "widget": "select",
+          "label": "Sun shadows",
+          "options": [
+            {
+              "label": "Off",
+              "value": 0
+            },
+            {
+              "label": "Soft",
+              "value": 1
+            },
+            {
+              "label": "Normal",
+              "value": 2
+            },
+            {
+              "label": "Strong",
+              "value": 3
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "bloom",
+          "kind": "int",
+          "widget": "select",
+          "label": "Bloom",
+          "options": [
+            {
+              "label": "Off",
+              "value": 0
+            },
+            {
+              "label": "Subtle",
+              "value": 1
+            },
+            {
+              "label": "Normal",
+              "value": 2
+            },
+            {
+              "label": "Strong",
+              "value": 3
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "ssao",
+          "kind": "int",
+          "widget": "select",
+          "label": "Ambient occlusion",
+          "options": [
+            {
+              "label": "Off",
+              "value": 0
+            },
+            {
+              "label": "Subtle",
+              "value": 1
+            },
+            {
+              "label": "Normal",
+              "value": 2
+            },
+            {
+              "label": "Strong",
+              "value": 3
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "dof",
+          "kind": "int",
+          "widget": "select",
+          "label": "Depth of field",
+          "options": [
+            {
+              "label": "Off",
+              "value": 0
+            },
+            {
+              "label": "Subtle",
+              "value": 1
+            },
+            {
+              "label": "Normal",
+              "value": 2
+            },
+            {
+              "label": "Strong",
+              "value": 3
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "anisotropy",
+          "kind": "int",
+          "widget": "select",
+          "label": "Anisotropic filtering",
+          "options": [
+            {
+              "label": "Off",
+              "value": 0
+            },
+            {
+              "label": "2×",
+              "value": 2
+            },
+            {
+              "label": "4×",
+              "value": 4
+            },
+            {
+              "label": "8×",
+              "value": 8
+            },
+            {
+              "label": "16×",
+              "value": 16
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "colourGrading",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Colour grading",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "gamma",
+          "kind": "number",
+          "widget": "slider",
+          "label": "Gamma",
+          "default": 1.0,
+          "min": 0.5,
+          "max": 2.0,
+          "step": 0.05
+        },
+        {
+          "pointer": "brightness",
+          "kind": "number",
+          "widget": "slider",
+          "label": "Brightness",
+          "default": 0.0,
+          "min": -0.5,
+          "max": 0.5,
+          "step": 0.05
+        },
+        {
+          "pointer": "saturation",
+          "kind": "number",
+          "widget": "slider",
+          "label": "Saturation",
+          "default": 1.0,
+          "min": 0.0,
+          "max": 2.0,
+          "step": 0.05
+        }
+      ]
+    },
+    {
+      "title": "Controls",
+      "fields": [
+        {
+          "pointer": "controlMode",
+          "kind": "int",
+          "widget": "radio",
+          "label": "Control mode",
+          "help": "Classic is the GameCube's own. Mouse cursor aims with the mouse and moves Olimar with WASD.",
+          "options": [
+            {
+              "label": "Classic",
+              "value": 0
+            },
+            {
+              "label": "Mouse cursor",
+              "value": 1
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "mouseSensitivity",
+          "kind": "number",
+          "widget": "slider",
+          "label": "Mouse speed",
+          "default": 1.0,
+          "min": 0.1,
+          "max": 5.0,
+          "step": 0.1,
+          "unit": "×"
+        },
+        {
+          "pointer": "mouseWheelAction",
+          "kind": "int",
+          "widget": "radio",
+          "label": "Mouse wheel",
+          "options": [
+            {
+              "label": "Pick the Pikmin colour",
+              "value": 0
+            },
+            {
+              "label": "Zoom the camera",
+              "value": 1
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "stickDeadZone",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Stick deadzone",
+          "default": 8,
+          "min": 0,
+          "max": 127,
+          "step": 1
+        },
+        {
+          "pointer": "gyroEnabled",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Gyro aiming",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "gyroSensitivity",
+          "kind": "number",
+          "widget": "slider",
+          "label": "Gyro speed",
+          "default": 1.0,
+          "min": 0.1,
+          "max": 5.0,
+          "step": 0.1,
+          "unit": "×"
+        },
+        {
+          "pointer": "firstPerson",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "First-person camera",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "freeCamera",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Free camera",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "lockOn",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Lock on",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        }
+      ]
+    },
+    {
+      "title": "Mods",
+      "help": "Changes to how the game plays. Every one of these is off in the game as it shipped.",
+      "fields": [
+        {
+          "pointer": "chainActions",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Chain Pikmin actions",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "holdToPluck",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Hold to keep plucking",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "betterPathfinding",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Unstick Pikmin that stop moving",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "bluesOnlyWater",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Only Blues enter water",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "idleCounter",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Show the idle Pikmin count",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "noTrip",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Pikmin never trip",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "instantWhistle",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Whistled Pikmin join at once",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "throwCancelB",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "B returns a held Pikmin to the group",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "throwWhileMoving",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Throw while moving",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "charge",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Charge",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "onionStep10",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Move ten at a time at the Onion",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "infiniteDay",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "The day never ends",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "whistleRadiusPct",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Whistle radius",
+          "default": 100,
+          "min": 50,
+          "max": 300,
+          "step": 10,
+          "unit": "%"
+        },
+        {
+          "pointer": "throwSpeedPct",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Throw speed",
+          "default": 100,
+          "min": 50,
+          "max": 200,
+          "step": 10,
+          "unit": "%"
+        },
+        {
+          "pointer": "naviHealthPct",
+          "kind": "int",
+          "widget": "select",
+          "label": "Olimar's health",
+          "options": [
+            {
+              "label": "25%",
+              "value": 25
+            },
+            {
+              "label": "50%",
+              "value": 50
+            },
+            {
+              "label": "75%",
+              "value": 75
+            },
+            {
+              "label": "100%",
+              "value": 100
+            },
+            {
+              "label": "150%",
+              "value": 150
+            },
+            {
+              "label": "200%",
+              "value": 200
+            },
+            {
+              "label": "300%",
+              "value": 300
+            },
+            {
+              "label": "500%",
+              "value": 500
+            }
+          ],
+          "default": 100
+        },
+        {
+          "pointer": "tekiHealthPct",
+          "kind": "int",
+          "widget": "select",
+          "label": "Enemy health",
+          "options": [
+            {
+              "label": "25%",
+              "value": 25
+            },
+            {
+              "label": "50%",
+              "value": 50
+            },
+            {
+              "label": "75%",
+              "value": 75
+            },
+            {
+              "label": "100%",
+              "value": 100
+            },
+            {
+              "label": "150%",
+              "value": 150
+            },
+            {
+              "label": "200%",
+              "value": 200
+            },
+            {
+              "label": "300%",
+              "value": 300
+            },
+            {
+              "label": "500%",
+              "value": 500
+            }
+          ],
+          "default": 100
+        },
+        {
+          "pointer": "pikiLimit",
+          "kind": "int",
+          "widget": "number",
+          "label": "Pikmin limit",
+          "default": 100,
+          "min": 50,
+          "max": 999,
+          "step": 10
+        },
+        {
+          "pointer": "dayLength",
+          "kind": "int",
+          "widget": "number",
+          "label": "Day length",
+          "help": "Zero keeps the game's own day, which is about 27 real minutes.",
+          "default": 0,
+          "min": 0,
+          "max": 120,
+          "step": 1,
+          "unit": "min"
+        }
+      ]
+    },
+    {
+      "title": "Co-op",
+      "fields": [
+        {
+          "pointer": "coopPlayers",
+          "kind": "int",
+          "widget": "radio",
+          "label": "Players",
+          "options": [
+            {
+              "label": "One",
+              "value": 1
+            },
+            {
+              "label": "Two",
+              "value": 2
+            }
+          ],
+          "default": 1
+        },
+        {
+          "pointer": "coopSplit",
+          "kind": "int",
+          "widget": "radio",
+          "label": "Split screen",
+          "help": "The touch build starts horizontal and the desktop build vertical, so this one has no default here.",
+          "options": [
+            {
+              "label": "Vertical",
+              "value": 0
+            },
+            {
+              "label": "Horizontal",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "pointer": "coopMergeCamera",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Merge the cameras when close",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        }
+      ]
+    }
+  ]
+}
