@@ -1,0 +1,38 @@
+{
+    "CVars": {
+        "gCockpitOpacity": 120,
+        "gDisableGorgonFlash": 0,
+        "gDisableLOD": 1,
+        "gDisableStarsInterpolation": 0,
+        "gEnemyRedRadio": 0,
+        "gFighterOutlines": 0,
+        "gForceExpertMode": 0,
+        "gGameMasterVolume": 1.0,
+        "gGraphics": {
+            "GammaMode": 0
+        },
+        "gInternalResolution": 1.0,
+        "gInterpolationFPS": 60,
+        "gInvertYAxis": 0,
+        "gLowResMode": 0,
+        "gMSAAValue": 1,
+        "gMainMusicVolume": 1.0,
+        "gMatchRefreshRate": 0,
+        "gSFXMusicVolume": 1.0,
+        "gSkipBriefing": 0,
+        "gSubwooferThreshold": 80,
+        "gTeamFaces": 1,
+        "gTextureFilter": 0,
+        "gVoiceLanguage": 0,
+        "gVoiceVolume": 1.0,
+        "gVolumeRearMusic": 1.0,
+        "gVsyncEnabled": 1
+    },
+    "Window": {
+        "Fullscreen": {
+            "Enabled": false
+        },
+        "Height": 480,
+        "Width": 640
+    }
+}

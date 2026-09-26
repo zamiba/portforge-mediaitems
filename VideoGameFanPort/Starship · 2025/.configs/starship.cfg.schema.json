@@ -1,7 +1,10 @@
 {
   "title": "Settings",
-  "path": "install/spaghettify.cfg.json",
+  "path": "install/starship.cfg.json",
   "format": "json",
+  "reference": {
+    "file": "starship.cfg.json.example"
+  },
   "sections": [
     {
       "title": "Window",
@@ -138,7 +141,7 @@
           "widget": "number",
           "label": "Frame rate",
           "help": "Frames the game interpolates to. Ignored while Match refresh rate is on.",
-          "default": 30,
+          "default": 60,
           "min": 20,
           "max": 360,
           "step": 1,
@@ -155,7 +158,7 @@
           "default": 0
         },
         {
-          "pointer": "CVars.gDisableLod",
+          "pointer": "CVars.gDisableLOD",
           "kind": "int",
           "widget": "toggle",
           "label": "No level of detail",
@@ -165,10 +168,20 @@
           "default": 1
         },
         {
-          "pointer": "CVars.gFixVisuals",
+          "pointer": "CVars.gGraphics.GammaMode",
           "kind": "int",
           "widget": "toggle",
-          "label": "Fix visual glitches",
+          "label": "Disable gamma boost",
+          "help": "Takes effect the next time the game starts.",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "CVars.gDisableStarsInterpolation",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Disable starfield interpolation",
           "on": 1,
           "off": 0,
           "default": 0
@@ -209,14 +222,52 @@
           "step": 0.05
         },
         {
-          "pointer": "CVars.gEnvironmentVolume",
+          "pointer": "CVars.gVoiceVolume",
           "kind": "float",
           "widget": "slider",
-          "label": "Environment volume",
+          "label": "Voice volume",
           "default": 1.0,
           "min": 0.0,
           "max": 1.0,
           "step": 0.05
+        },
+        {
+          "pointer": "CVars.gVolumeRearMusic",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Rear music volume",
+          "default": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "step": 0.05
+        },
+        {
+          "pointer": "CVars.gVoiceLanguage",
+          "kind": "int",
+          "widget": "radio",
+          "label": "Voices",
+          "options": [
+            {
+              "label": "Original",
+              "value": 0
+            },
+            {
+              "label": "Lylat",
+              "value": 1
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "CVars.gSubwooferThreshold",
+          "kind": "int",
+          "widget": "number",
+          "label": "Subwoofer threshold",
+          "default": 80,
+          "min": 10,
+          "max": 1000,
+          "step": 1,
+          "unit": "Hz"
         }
       ]
     },
@@ -224,87 +275,78 @@
       "title": "Gameplay",
       "fields": [
         {
-          "pointer": "CVars.gSkipIntro",
+          "pointer": "CVars.gInvertYAxis",
           "kind": "int",
           "widget": "toggle",
-          "label": "Skip the intro",
+          "label": "Invert Y axis",
           "on": 1,
           "off": 0,
           "default": 0
         },
         {
-          "pointer": "CVars.gEnableDigitalSpeedometer",
+          "pointer": "CVars.gTeamFaces",
           "kind": "int",
           "widget": "toggle",
-          "label": "Digital speedometer",
-          "on": 1,
-          "off": 0,
-          "default": 0
-        },
-        {
-          "pointer": "CVars.gBetterResultPortraits",
-          "kind": "int",
-          "widget": "toggle",
-          "label": "Better result portraits",
-          "on": 1,
-          "off": 0,
-          "default": 0
-        },
-        {
-          "pointer": "CVars.gUniqueCharacterSelections",
-          "kind": "int",
-          "widget": "toggle",
-          "label": "One character per player",
+          "label": "Always show pilot faces",
+          "help": "Keeps the character heads inside the Arwings at all times.",
           "on": 1,
           "off": 0,
           "default": 1
         },
         {
-          "pointer": "CVars.gDisableRubberbanding",
+          "pointer": "CVars.gEnemyRedRadio",
           "kind": "int",
           "widget": "toggle",
-          "label": "Disable rubber-banding",
+          "label": "Red radio backgrounds for enemies",
           "on": 1,
           "off": 0,
           "default": 0
         },
         {
-          "pointer": "CVars.gHarderCPU",
+          "pointer": "CVars.gFighterOutlines",
           "kind": "int",
           "widget": "toggle",
-          "label": "Harder CPU drivers",
+          "label": "Outline fighters on the radar",
           "on": 1,
           "off": 0,
           "default": 0
         },
         {
-          "pointer": "CVars.gShellsShootStraight",
+          "pointer": "CVars.gDisableGorgonFlash",
           "kind": "int",
           "widget": "toggle",
-          "label": "Shells travel straight",
+          "label": "Disable Gorgon screen flashes",
           "on": 1,
           "off": 0,
           "default": 0
         },
         {
-          "pointer": "CVars.gEnableCustomCC",
+          "pointer": "CVars.gCockpitOpacity",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Cockpit glass opacity",
+          "default": 120,
+          "min": 0,
+          "max": 255,
+          "step": 1
+        },
+        {
+          "pointer": "CVars.gSkipBriefing",
           "kind": "int",
           "widget": "toggle",
-          "label": "Custom engine class",
+          "label": "Skip mission briefings",
           "on": 1,
           "off": 0,
           "default": 0
         },
         {
-          "pointer": "CVars.gCustomCC",
-          "kind": "float",
-          "widget": "number",
-          "label": "Custom engine class speed",
-          "help": "Only used while Custom engine class is on. 150 matches 150cc.",
-          "default": 150.0,
-          "min": 50.0,
-          "max": 500.0,
-          "step": 10.0
+          "pointer": "CVars.gForceExpertMode",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Expert mode",
+          "on": 1,
+          "off": 0,
+          "default": 0
         }
       ]
     }

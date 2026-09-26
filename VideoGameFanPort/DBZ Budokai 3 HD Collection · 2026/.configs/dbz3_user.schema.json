@@ -1,0 +1,446 @@
+{
+  "title": "Settings",
+  "path": "install/dbz3_user.toml",
+  "format": "toml",
+  "sections": [
+    {
+      "title": "Display",
+      "fields": [
+        {
+          "pointer": "dbz3_fullscreen_mode",
+          "kind": "string",
+          "widget": "select",
+          "label": "Window mode",
+          "options": [
+            {
+              "label": "Windowed",
+              "value": "windowed"
+            },
+            {
+              "label": "Borderless",
+              "value": "borderless"
+            },
+            {
+              "label": "Exclusive fullscreen",
+              "value": "exclusive"
+            }
+          ],
+          "default": "windowed"
+        },
+        {
+          "pointer": "dbz3_vsync",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "V-sync",
+          "default": true
+        },
+        {
+          "pointer": "dbz3_vrr",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Variable refresh rate",
+          "help": "Paces the monitor to each presented frame, for G-Sync and FreeSync panels.",
+          "default": true
+        },
+        {
+          "pointer": "dbz3_frame_cap",
+          "kind": "int",
+          "widget": "number",
+          "label": "Frame cap",
+          "help": "Zero is uncapped.",
+          "default": 60,
+          "min": 0,
+          "max": 240,
+          "step": 1,
+          "unit": "fps"
+        }
+      ]
+    },
+    {
+      "title": "Quality",
+      "help": "The preset decides these for you unless it is set to Manual.",
+      "fields": [
+        {
+          "pointer": "dbz3_quality_preset",
+          "kind": "string",
+          "widget": "select",
+          "label": "Quality preset",
+          "help": "Auto detects the GPU and re-applies its recommendation on every launch. Manual uses the settings below as they are.",
+          "options": [
+            {
+              "label": "Auto",
+              "value": "auto"
+            },
+            {
+              "label": "Performance",
+              "value": "performance"
+            },
+            {
+              "label": "Balanced",
+              "value": "balanced"
+            },
+            {
+              "label": "Quality",
+              "value": "quality"
+            },
+            {
+              "label": "Manual",
+              "value": "manual"
+            }
+          ],
+          "default": "auto"
+        },
+        {
+          "pointer": "dbz3_resolution_scale",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Internal render scale",
+          "help": "Supersamples the game's 720p framebuffer. Takes effect the next time the game starts.",
+          "default": 1,
+          "min": 1,
+          "max": 4,
+          "step": 1,
+          "unit": "×"
+        },
+        {
+          "pointer": "dbz3_native_2x_msaa",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Native 2× MSAA",
+          "help": "Takes effect the next time the game starts.",
+          "default": true
+        },
+        {
+          "pointer": "dbz3_anisotropic",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Anisotropic filtering",
+          "help": "Zero is off. Takes effect the next time the game starts.",
+          "default": 5,
+          "min": 0,
+          "max": 5,
+          "step": 1
+        },
+        {
+          "pointer": "dbz3_hd_textures",
+          "kind": "int",
+          "widget": "select",
+          "label": "HD textures",
+          "help": "Upscales the game's own textures on the host. Work in progress, and it costs video memory.",
+          "options": [
+            {
+              "label": "Off",
+              "value": 1
+            },
+            {
+              "label": "2×",
+              "value": 2
+            },
+            {
+              "label": "3×",
+              "value": 3
+            }
+          ],
+          "default": 1
+        },
+        {
+          "pointer": "dbz3_gpu_backend",
+          "kind": "string",
+          "widget": "select",
+          "label": "Graphics backend",
+          "help": "Direct3D 12 on Windows and Vulkan elsewhere, which is why this has no single default.",
+          "options": [
+            {
+              "label": "Direct3D 12",
+              "value": "d3d12"
+            },
+            {
+              "label": "Vulkan",
+              "value": "vulkan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Image",
+      "fields": [
+        {
+          "pointer": "dbz3_present_effect",
+          "kind": "string",
+          "widget": "select",
+          "label": "Upscaling",
+          "options": [
+            {
+              "label": "Bilinear",
+              "value": "bilinear"
+            },
+            {
+              "label": "CAS",
+              "value": "cas"
+            },
+            {
+              "label": "FSR",
+              "value": "fsr"
+            }
+          ],
+          "default": "fsr"
+        },
+        {
+          "pointer": "dbz3_fsr_quality",
+          "kind": "string",
+          "widget": "select",
+          "label": "FSR quality",
+          "help": "Only used while Upscaling is FSR.",
+          "options": [
+            {
+              "label": "Auto",
+              "value": "auto"
+            },
+            {
+              "label": "Native AA",
+              "value": "native_aa"
+            },
+            {
+              "label": "Quality",
+              "value": "quality"
+            },
+            {
+              "label": "Balanced",
+              "value": "balanced"
+            },
+            {
+              "label": "Performance",
+              "value": "performance"
+            }
+          ],
+          "default": "quality"
+        },
+        {
+          "pointer": "dbz3_fsr_sharpness",
+          "kind": "float",
+          "widget": "slider",
+          "label": "FSR sharpness reduction",
+          "help": "In stops. Only used while Upscaling is FSR.",
+          "default": 0.2,
+          "min": 0.0,
+          "max": 2.0,
+          "step": 0.1
+        },
+        {
+          "pointer": "dbz3_cas_sharpness",
+          "kind": "float",
+          "widget": "slider",
+          "label": "CAS sharpness",
+          "help": "Only used while Upscaling is CAS.",
+          "default": 0.0,
+          "min": 0.0,
+          "max": 1.0,
+          "step": 0.05
+        },
+        {
+          "pointer": "dbz3_fxaa",
+          "kind": "string",
+          "widget": "select",
+          "label": "FXAA",
+          "options": [
+            {
+              "label": "Off",
+              "value": "none"
+            },
+            {
+              "label": "FXAA",
+              "value": "fxaa"
+            },
+            {
+              "label": "Extreme",
+              "value": "fxaa_extreme"
+            }
+          ],
+          "default": "none"
+        },
+        {
+          "pointer": "dbz3_present_dither",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Dither the final image",
+          "help": "Smoother gradients.",
+          "default": false
+        },
+        {
+          "pointer": "dbz3_dim_unfocused",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Dim when unfocused",
+          "default": true
+        }
+      ]
+    },
+    {
+      "title": "Audio",
+      "help": "The game mixes every channel into one stream, so music, effects and voices cannot be separated here.",
+      "fields": [
+        {
+          "pointer": "dbz3_master_volume",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Master volume",
+          "default": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "step": 0.05
+        },
+        {
+          "pointer": "dbz3_mute",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Mute",
+          "default": false
+        }
+      ]
+    },
+    {
+      "title": "Language",
+      "fields": [
+        {
+          "pointer": "dbz3_language",
+          "kind": "int",
+          "widget": "select",
+          "label": "Game text",
+          "options": [
+            {
+              "label": "English",
+              "value": 1
+            },
+            {
+              "label": "Japanese",
+              "value": 2
+            },
+            {
+              "label": "German",
+              "value": 3
+            },
+            {
+              "label": "French",
+              "value": 4
+            },
+            {
+              "label": "Spanish",
+              "value": 5
+            },
+            {
+              "label": "Italian",
+              "value": 6
+            }
+          ],
+          "default": 1
+        },
+        {
+          "pointer": "dbz3_region",
+          "kind": "string",
+          "widget": "radio",
+          "label": "Asset region",
+          "help": "Which of the us/ and eu/ asset folders is mounted. The core detects the executable itself, so this only swaps the text, audio and video packs.",
+          "options": [
+            {
+              "label": "US (NTSC)",
+              "value": "us"
+            },
+            {
+              "label": "EU (PAL)",
+              "value": "eu"
+            }
+          ],
+          "default": "us"
+        }
+      ]
+    },
+    {
+      "title": "Input",
+      "fields": [
+        {
+          "pointer": "dbz3_deadzone",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Left stick deadzone",
+          "default": 0.1,
+          "min": 0.0,
+          "max": 0.9,
+          "step": 0.05
+        },
+        {
+          "pointer": "dbz3_rumble",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Controller vibration",
+          "default": true
+        },
+        {
+          "pointer": "dbz3_input_backend",
+          "kind": "string",
+          "widget": "select",
+          "label": "Controller backend",
+          "help": "XInput on Windows and SDL elsewhere, which is why this has no single default. XInput avoids a hang some overlays cause.",
+          "options": [
+            {
+              "label": "XInput",
+              "value": "xinput"
+            },
+            {
+              "label": "SDL",
+              "value": "sdl"
+            }
+          ]
+        },
+        {
+          "pointer": "dbz3_mnk_mode",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Keyboard and mouse control",
+          "help": "On by default, because this is a gamepad game and the keyboard has to work out of the box.",
+          "default": true
+        },
+        {
+          "pointer": "dbz3_mnk_mouse",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Mouse moves the right stick",
+          "default": false
+        },
+        {
+          "pointer": "dbz3_mnk_sensitivity",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Mouse sensitivity",
+          "help": "Only used while the mouse moves the right stick.",
+          "default": 1.0,
+          "min": 0.01,
+          "max": 10.0,
+          "step": 0.1,
+          "unit": "×"
+        }
+      ]
+    },
+    {
+      "title": "Game data",
+      "fields": [
+        {
+          "pointer": "dbz3_game_dir",
+          "kind": "string",
+          "widget": "path",
+          "label": "Game data folder",
+          "help": "The folder that directly contains us/ and eu/. Empty looks beside the executable and in its parents.",
+          "default": ""
+        },
+        {
+          "pointer": "dbz3_iso_path",
+          "kind": "string",
+          "widget": "path",
+          "label": "Disc image",
+          "help": "An Xbox 360 .iso to play from instead of an extracted folder. Empty uses the folder above.",
+          "default": ""
+        }
+      ]
+    }
+  ]
+}

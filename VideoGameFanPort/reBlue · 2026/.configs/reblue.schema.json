@@ -1,0 +1,590 @@
+{
+  "title": "Settings",
+  "path": "install/profiles/default/reblue.toml",
+  "format": "toml",
+  "sections": [
+    {
+      "title": "Display",
+      "help": "This is the default profile's file. Launching with --profile picks a different one, which PortForge does not do.",
+      "fields": [
+        {
+          "pointer": "bd_vsync",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "V-sync",
+          "default": true
+        },
+        {
+          "pointer": "bd_aspect_ratio",
+          "kind": "int",
+          "widget": "select",
+          "label": "Aspect ratio",
+          "options": [
+            {
+              "label": "16:9",
+              "value": 0
+            },
+            {
+              "label": "4:3",
+              "value": 1
+            },
+            {
+              "label": "16:10",
+              "value": 2
+            },
+            {
+              "label": "21:9",
+              "value": 3
+            },
+            {
+              "label": "32:9",
+              "value": 4
+            },
+            {
+              "label": "Match the display",
+              "value": 5
+            },
+            {
+              "label": "Fill the display",
+              "value": 6
+            }
+          ],
+          "default": 5
+        },
+        {
+          "pointer": "bd_fov_offset",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Extra field of view",
+          "help": "Degrees added horizontally at 16:9, which the game's own menu counts off 45. Battle and event scenes keep the game's value, since their effects are drawn to span it.",
+          "default": 0,
+          "min": 0,
+          "max": 75,
+          "step": 1,
+          "unit": "°"
+        }
+      ]
+    },
+    {
+      "title": "Quality",
+      "fields": [
+        {
+          "pointer": "bd_render_scale",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Render scale",
+          "help": "Percent of the output resolution the 3D scene renders at, upscaled when presented.",
+          "default": 100,
+          "min": 25,
+          "max": 200,
+          "step": 5,
+          "unit": "%"
+        },
+        {
+          "pointer": "bd_supersampling",
+          "kind": "int",
+          "widget": "select",
+          "label": "Supersampling",
+          "help": "Renders at twice the output resolution and downsamples. Takes effect the next time the game starts.",
+          "options": [
+            {
+              "label": "Off",
+              "value": 1
+            },
+            {
+              "label": "2×",
+              "value": 2
+            }
+          ],
+          "default": 1
+        },
+        {
+          "pointer": "bd_msaa",
+          "kind": "int",
+          "widget": "select",
+          "label": "MSAA",
+          "help": "Clamped to what the device supports. Takes effect the next time the game starts.",
+          "options": [
+            {
+              "label": "Off",
+              "value": 0
+            },
+            {
+              "label": "2×",
+              "value": 2
+            },
+            {
+              "label": "4×",
+              "value": 4
+            },
+            {
+              "label": "8×",
+              "value": 8
+            }
+          ],
+          "default": 4
+        },
+        {
+          "pointer": "bd_anisotropy",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Anisotropic filtering",
+          "default": 16,
+          "min": 0,
+          "max": 16,
+          "step": 1,
+          "unit": "×"
+        },
+        {
+          "pointer": "bd_shadow_dimension",
+          "kind": "int",
+          "widget": "select",
+          "label": "Shadow resolution",
+          "help": "Takes effect the next time the game starts.",
+          "options": [
+            {
+              "label": "512",
+              "value": 512
+            },
+            {
+              "label": "1024",
+              "value": 1024
+            },
+            {
+              "label": "2048",
+              "value": 2048
+            },
+            {
+              "label": "4096",
+              "value": 4096
+            },
+            {
+              "label": "8192",
+              "value": 8192
+            }
+          ],
+          "default": 4096
+        },
+        {
+          "pointer": "bd_shadow_distance",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Shadow distance",
+          "help": "A multiplier on the console's own draw distance.",
+          "default": 2.0,
+          "min": 1.0,
+          "max": 4.0,
+          "step": 0.5,
+          "unit": "×"
+        },
+        {
+          "pointer": "bd_post_quality",
+          "kind": "int",
+          "widget": "select",
+          "label": "Post-processing resolution",
+          "help": "What the bloom and depth-of-field chain runs at.",
+          "options": [
+            {
+              "label": "Half the scene",
+              "value": 0
+            },
+            {
+              "label": "The scene",
+              "value": 1
+            },
+            {
+              "label": "Widened",
+              "value": 2
+            }
+          ],
+          "default": 1
+        },
+        {
+          "pointer": "bd_reflection_quality",
+          "kind": "int",
+          "widget": "select",
+          "label": "Reflections",
+          "help": "How far a planar reflection grows past the size the game authored.",
+          "options": [
+            {
+              "label": "As authored",
+              "value": 0
+            },
+            {
+              "label": "With the render resolution",
+              "value": 1
+            },
+            {
+              "label": "With supersampling too",
+              "value": 2
+            }
+          ],
+          "default": 1
+        },
+        {
+          "pointer": "bd_dof_strength",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Depth of field",
+          "help": "1.0 is the game's own blur; zero turns it off.",
+          "default": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "step": 0.05
+        },
+        {
+          "pointer": "bd_ntsc_filter",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Analog TV filter",
+          "help": "The game's own scanline filter. Every scene it ships disables it, so it only shows in the Battle Viewer.",
+          "default": false
+        }
+      ]
+    },
+    {
+      "title": "Audio",
+      "fields": [
+        {
+          "pointer": "bd_audio_gain",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Master gain",
+          "default": 1.0,
+          "min": 0.0,
+          "max": 2.0,
+          "step": 0.05,
+          "unit": "×"
+        },
+        {
+          "pointer": "bd_audio_center",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Centre channel",
+          "help": "Only used on a surround device.",
+          "default": 1.0,
+          "min": 0.0,
+          "max": 2.0,
+          "step": 0.05,
+          "unit": "×"
+        },
+        {
+          "pointer": "bd_audio_surround",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Rear channels",
+          "help": "Only used on a surround device.",
+          "default": 1.0,
+          "min": 0.0,
+          "max": 2.0,
+          "step": 0.05,
+          "unit": "×"
+        },
+        {
+          "pointer": "bd_audio_lfe",
+          "kind": "float",
+          "widget": "slider",
+          "label": "LFE channel",
+          "help": "Only used on a surround device.",
+          "default": 0.0,
+          "min": 0.0,
+          "max": 2.0,
+          "step": 0.05,
+          "unit": "×"
+        }
+      ]
+    },
+    {
+      "title": "Game options",
+      "help": "The rows of the game's own Options screen. A few are absent on discs that do not carry them.",
+      "fields": [
+        {
+          "pointer": "bd_opt_msg_speed",
+          "kind": "int",
+          "widget": "select",
+          "label": "Text speed",
+          "options": [
+            {
+              "label": "Slow",
+              "value": 0
+            },
+            {
+              "label": "Normal",
+              "value": 1
+            },
+            {
+              "label": "Fast",
+              "value": 2
+            },
+            {
+              "label": "Very fast",
+              "value": 3
+            }
+          ],
+          "default": 2
+        },
+        {
+          "pointer": "bd_opt_msg_size",
+          "kind": "int",
+          "widget": "select",
+          "label": "Text size",
+          "options": [
+            {
+              "label": "Small",
+              "value": 0
+            },
+            {
+              "label": "Normal",
+              "value": 1
+            },
+            {
+              "label": "Large",
+              "value": 2
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "bd_opt_subtitles",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Event subtitles",
+          "on": 1,
+          "off": 0,
+          "default": 1
+        },
+        {
+          "pointer": "bd_opt_audio_hints",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Audio hints",
+          "on": 1,
+          "off": 0,
+          "default": 1
+        },
+        {
+          "pointer": "bd_opt_battle_hints",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Battle hints",
+          "on": 1,
+          "off": 0,
+          "default": 1
+        },
+        {
+          "pointer": "bd_opt_skip_events",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Events can be skipped",
+          "on": 1,
+          "off": 0,
+          "default": 1
+        },
+        {
+          "pointer": "bd_opt_camera",
+          "kind": "int",
+          "widget": "radio",
+          "label": "Camera",
+          "options": [
+            {
+              "label": "Standard",
+              "value": 0
+            },
+            {
+              "label": "Inverted",
+              "value": 1
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "bd_opt_target_first",
+          "kind": "int",
+          "widget": "select",
+          "label": "Battle target priority",
+          "options": [
+            {
+              "label": "Lowest HP",
+              "value": 0
+            },
+            {
+              "label": "Left",
+              "value": 1
+            },
+            {
+              "label": "Centre",
+              "value": 2
+            },
+            {
+              "label": "Right",
+              "value": 3
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "bd_opt_ctl_normal_type",
+          "kind": "int",
+          "widget": "select",
+          "label": "Field controls",
+          "options": [
+            {
+              "label": "Type A",
+              "value": 0
+            },
+            {
+              "label": "Type B",
+              "value": 1
+            },
+            {
+              "label": "Type C",
+              "value": 2
+            },
+            {
+              "label": "Type D",
+              "value": 3
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "bd_opt_ctl_mechatt_type",
+          "kind": "int",
+          "widget": "select",
+          "label": "Mechat shooting controls",
+          "options": [
+            {
+              "label": "Type A",
+              "value": 0
+            },
+            {
+              "label": "Type B",
+              "value": 1
+            },
+            {
+              "label": "Type C",
+              "value": 2
+            },
+            {
+              "label": "Type D",
+              "value": 3
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "bd_opt_music_volume",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Music volume",
+          "help": "The game's own scale: -1 is silent and 1 is full.",
+          "default": 1.0,
+          "min": -1.0,
+          "max": 1.0,
+          "step": 0.1
+        },
+        {
+          "pointer": "bd_opt_se_volume",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Sound effect volume",
+          "help": "The game's own scale: -1 is silent and 1 is full. It drives the voice bus as well.",
+          "default": 1.0,
+          "min": -1.0,
+          "max": 1.0,
+          "step": 0.1
+        },
+        {
+          "pointer": "bd_opt_brightness",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Brightness",
+          "help": "Zero leaves the picture untouched.",
+          "default": 0.0,
+          "min": -1.0,
+          "max": 1.0,
+          "step": 0.1
+        },
+        {
+          "pointer": "bd_opt_screen_pos_x",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Screen position, across",
+          "default": 0.0,
+          "min": -1.0,
+          "max": 1.0,
+          "step": 0.1
+        },
+        {
+          "pointer": "bd_opt_screen_pos_y",
+          "kind": "float",
+          "widget": "slider",
+          "label": "Screen position, up and down",
+          "default": 0.0,
+          "min": -1.0,
+          "max": 1.0,
+          "step": 0.1
+        }
+      ]
+    },
+    {
+      "title": "Language",
+      "fields": [
+        {
+          "pointer": "bd_language",
+          "kind": "string",
+          "widget": "select",
+          "label": "Interface language",
+          "help": "Takes effect the next time the game starts.",
+          "options": [
+            {
+              "label": "Automatic",
+              "value": "auto"
+            },
+            {
+              "label": "English",
+              "value": "us"
+            },
+            {
+              "label": "Japanese",
+              "value": "jp"
+            },
+            {
+              "label": "German",
+              "value": "de"
+            },
+            {
+              "label": "French",
+              "value": "fr"
+            },
+            {
+              "label": "Spanish",
+              "value": "es"
+            },
+            {
+              "label": "Italian",
+              "value": "it"
+            },
+            {
+              "label": "Korean",
+              "value": "kr"
+            },
+            {
+              "label": "Chinese (traditional)",
+              "value": "tw"
+            },
+            {
+              "label": "Chinese (simplified)",
+              "value": "cn"
+            },
+            {
+              "label": "Portuguese",
+              "value": "po"
+            }
+          ],
+          "default": "auto"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+    "CVars": {
+        "gSettings": {
+            "A11yNoHeatHaze": 0,
+            "A11yNoJabuWobble": 0,
+            "A11yTTS": 0,
+            "AutoCaptureMouse": 1,
+            "Controls": {
+                "InvertAimingXAxis": 0,
+                "InvertAimingYAxis": 1,
+                "RightStickAim": 0
+            },
+            "DPadOnPause": 0,
+            "DisableFirstPersonAutoCenterView": 0,
+            "DpadInText": 0,
+            "EnableMouse": 0,
+            "EnableMultiViewports": 1,
+            "InternalResolution": 1.0,
+            "InterpolationFPS": 20,
+            "Languages": 0,
+            "LowResMode": 0,
+            "MSAAValue": 1,
+            "MatchRefreshRate": 0,
+            "SdlWindowedFullscreen": 0,
+            "TextureFilter": 0,
+            "TitleScreenTranslation": 0,
+            "Volume": {
+                "Fanfare": 100,
+                "MainMusic": 100,
+                "Master": 40,
+                "SFX": 100,
+                "SubMusic": 100
+            },
+            "VsyncEnabled": 1
+        }
+    },
+    "Window": {
+        "Fullscreen": {
+            "Enabled": false
+        },
+        "Height": 480,
+        "Width": 640
+    }
+}

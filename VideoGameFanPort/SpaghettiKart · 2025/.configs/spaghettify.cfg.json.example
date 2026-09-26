@@ -1,0 +1,33 @@
+{
+    "CVars": {
+        "gBetterResultPortraits": 0,
+        "gCustomCC": 150.0,
+        "gDisableLod": 1,
+        "gDisableRubberbanding": 0,
+        "gEnableCustomCC": 0,
+        "gEnableDigitalSpeedometer": 0,
+        "gEnvironmentVolume": 1.0,
+        "gFixVisuals": 0,
+        "gGameMasterVolume": 1.0,
+        "gHarderCPU": 0,
+        "gInternalResolution": 1.0,
+        "gInterpolationFPS": 30,
+        "gLowResMode": 0,
+        "gMSAAValue": 1,
+        "gMainMusicVolume": 1.0,
+        "gMatchRefreshRate": 0,
+        "gSFXMusicVolume": 1.0,
+        "gShellsShootStraight": 0,
+        "gSkipIntro": 0,
+        "gTextureFilter": 0,
+        "gUniqueCharacterSelections": 1,
+        "gVsyncEnabled": 1
+    },
+    "Window": {
+        "Fullscreen": {
+            "Enabled": false
+        },
+        "Height": 480,
+        "Width": 640
+    }
+}

@@ -2,6 +2,16 @@
   "title": "Settings",
   "path": "install/config/settings.cfg",
   "format": "godot",
+  "reference": [
+    {
+      "file": "settings.cfg.1.0.2.example",
+      "untilVersion": "1.0.2"
+    },
+    {
+      "file": "settings.cfg.1.1 RC4.example",
+      "sinceVersion": "1.1 RC4"
+    }
+  ],
   "sections": [
     {
       "title": "Video",

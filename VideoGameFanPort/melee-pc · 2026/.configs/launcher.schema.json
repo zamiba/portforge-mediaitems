@@ -1,0 +1,361 @@
+{
+  "title": "Launcher",
+  "path": "melee-pc/launcher.cfg",
+  "format": "spaceSeparated",
+  "sections": [
+    {
+      "title": "Display",
+      "fields": [
+        {
+          "pointer": "fullscreen",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Fullscreen",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "vsync",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "V-sync",
+          "on": 1,
+          "off": 0,
+          "default": 1
+        },
+        {
+          "pointer": "scale",
+          "kind": "number",
+          "widget": "slider",
+          "label": "Window scale",
+          "default": 1.0,
+          "min": 0.75,
+          "max": 1.5,
+          "step": 0.05,
+          "unit": "×"
+        },
+        {
+          "pointer": "render_scale",
+          "kind": "number",
+          "widget": "slider",
+          "label": "Render scale",
+          "help": "Zero follows the window.",
+          "default": 0.0,
+          "min": 0.0,
+          "max": 10.0,
+          "step": 0.25,
+          "unit": "×"
+        },
+        {
+          "pointer": "widescreen",
+          "kind": "int",
+          "widget": "select",
+          "label": "Widescreen",
+          "options": [
+            {
+              "label": "Off",
+              "value": 0
+            },
+            {
+              "label": "On",
+              "value": 1
+            },
+            {
+              "label": "Wide",
+              "value": 2
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "msaa",
+          "kind": "int",
+          "widget": "select",
+          "label": "Anti-aliasing",
+          "help": "This renderer offers only these two.",
+          "options": [
+            {
+              "label": "Off",
+              "value": 1
+            },
+            {
+              "label": "4×",
+              "value": 4
+            }
+          ],
+          "default": 1
+        },
+        {
+          "pointer": "anisotropy",
+          "kind": "int",
+          "widget": "select",
+          "label": "Anisotropic filtering",
+          "options": [
+            {
+              "label": "Off",
+              "value": 1
+            },
+            {
+              "label": "2×",
+              "value": 2
+            },
+            {
+              "label": "4×",
+              "value": 4
+            },
+            {
+              "label": "8×",
+              "value": 8
+            },
+            {
+              "label": "16×",
+              "value": 16
+            }
+          ],
+          "default": 16
+        },
+        {
+          "pointer": "filter_mode",
+          "kind": "int",
+          "widget": "select",
+          "label": "Texture filter",
+          "options": [
+            {
+              "label": "Nearest",
+              "value": 0
+            },
+            {
+              "label": "Bilinear",
+              "value": 1
+            },
+            {
+              "label": "Trilinear",
+              "value": 2
+            },
+            {
+              "label": "Anisotropic",
+              "value": 3
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "backend",
+          "kind": "int",
+          "widget": "select",
+          "label": "Graphics backend",
+          "options": [
+            {
+              "label": "Automatic",
+              "value": 0
+            },
+            {
+              "label": "Vulkan",
+              "value": 1
+            },
+            {
+              "label": "Metal",
+              "value": 2
+            },
+            {
+              "label": "OpenGL",
+              "value": 3
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "fps",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Show the frame rate",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        }
+      ]
+    },
+    {
+      "title": "Audio",
+      "fields": [
+        {
+          "pointer": "volume",
+          "kind": "number",
+          "widget": "slider",
+          "label": "Master volume",
+          "default": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "step": 0.05
+        },
+        {
+          "pointer": "music_volume",
+          "kind": "number",
+          "widget": "slider",
+          "label": "Music volume",
+          "default": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "step": 0.05
+        },
+        {
+          "pointer": "sfx_volume",
+          "kind": "number",
+          "widget": "slider",
+          "label": "Sound effect volume",
+          "default": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "step": 0.05
+        },
+        {
+          "pointer": "mute",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Mute",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "reverb",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Reverb",
+          "on": 1,
+          "off": 0,
+          "default": 1
+        }
+      ]
+    },
+    {
+      "title": "Game",
+      "fields": [
+        {
+          "pointer": "disc",
+          "kind": "string",
+          "widget": "path",
+          "label": "Disc image",
+          "help": "Left empty, the launcher looks for one in Documents and beside itself.",
+          "default": ""
+        },
+        {
+          "pointer": "unlock_all",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Unlock everything",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "frozen_stadium",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Frozen Pokémon Stadium",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "free_camera",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Free camera",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "ucf",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Universal Controller Fix",
+          "on": 1,
+          "off": 0,
+          "default": 0
+        },
+        {
+          "pointer": "hud_mode",
+          "kind": "int",
+          "widget": "radio",
+          "label": "HUD",
+          "options": [
+            {
+              "label": "Normal",
+              "value": 0
+            },
+            {
+              "label": "Minimal",
+              "value": 1
+            }
+          ],
+          "default": 0
+        },
+        {
+          "pointer": "custom_textures",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Custom textures",
+          "on": 1,
+          "off": 0,
+          "default": 1
+        },
+        {
+          "pointer": "check_updates",
+          "kind": "int",
+          "widget": "toggle",
+          "label": "Check for updates",
+          "on": 1,
+          "off": 0,
+          "default": 1
+        }
+      ]
+    },
+    {
+      "title": "Netplay",
+      "fields": [
+        {
+          "pointer": "net_name",
+          "kind": "string",
+          "widget": "text",
+          "label": "Player tag",
+          "help": "Up to eight characters, letters and digits only; the launcher upper-cases it.",
+          "default": "PLAYER"
+        },
+        {
+          "pointer": "net_target",
+          "kind": "string",
+          "widget": "text",
+          "label": "Connect code",
+          "help": "Empty hosts your own code instead of joining one.",
+          "default": ""
+        },
+        {
+          "pointer": "net_delay",
+          "kind": "int",
+          "widget": "number",
+          "label": "Input delay",
+          "help": "Minus one picks a delay for you.",
+          "default": -1,
+          "min": -1,
+          "max": 4,
+          "step": 1,
+          "unit": " frames"
+        },
+        {
+          "pointer": "net_port",
+          "kind": "int",
+          "widget": "number",
+          "label": "Port",
+          "help": "Zero lets the operating system choose.",
+          "default": 0,
+          "min": 0,
+          "max": 65535,
+          "step": 1
+        }
+      ]
+    }
+  ]
+}

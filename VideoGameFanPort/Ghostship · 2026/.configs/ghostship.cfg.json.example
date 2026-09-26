@@ -1,0 +1,43 @@
+{
+    "CVars": {
+        "gEnhancements": {
+            "Camera": {
+                "CameraSpeed": 32.0,
+                "ImprovedCButtonCamera": 0,
+                "InvertedHorizontalCamera": 0,
+                "InvertedVerticalCamera": 0
+            },
+            "DisableDrawDistance": 0,
+            "DisableLOD": 1,
+            "DisableLakituCutscene": 0,
+            "DisablePeachCutscene": 0,
+            "Mods": {
+                "AlternateAssets": 0
+            },
+            "StarNoExit": 0
+        },
+        "gSettings": {
+            "InternalResolution": 1.0,
+            "InterpolationFPS": 30,
+            "LowResMode": 0,
+            "MSAAValue": 1,
+            "MatchRefreshRate": 0,
+            "SdlWindowedFullscreen": 0,
+            "TextureFilter": 0,
+            "Volume": {
+                "Environment": 100,
+                "MainMusic": 100,
+                "Master": 100,
+                "SFX": 100
+            },
+            "VsyncEnabled": 1
+        }
+    },
+    "Window": {
+        "Fullscreen": {
+            "Enabled": false
+        },
+        "Height": 480,
+        "Width": 640
+    }
+}

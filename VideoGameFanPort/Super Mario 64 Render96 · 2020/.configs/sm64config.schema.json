@@ -1,0 +1,158 @@
+{
+  "title": "Settings",
+  "path": "sm64config.txt",
+  "format": "spaceSeparated",
+  "sections": [
+    {
+      "title": "Display",
+      "fields": [
+        {
+          "pointer": "fullscreen",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Fullscreen",
+          "default": false
+        },
+        {
+          "pointer": "vsync",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "V-sync",
+          "default": true
+        },
+        {
+          "pointer": "window_w",
+          "kind": "int",
+          "widget": "number",
+          "label": "Window width",
+          "default": 640,
+          "min": 320,
+          "max": 7680,
+          "step": 1,
+          "unit": "px"
+        },
+        {
+          "pointer": "window_h",
+          "kind": "int",
+          "widget": "number",
+          "label": "Window height",
+          "default": 480,
+          "min": 240,
+          "max": 4320,
+          "step": 1,
+          "unit": "px"
+        },
+        {
+          "pointer": "texture_filtering",
+          "kind": "int",
+          "widget": "radio",
+          "label": "Texture filter",
+          "options": [
+            {
+              "label": "Nearest",
+              "value": 0
+            },
+            {
+              "label": "Linear",
+              "value": 1
+            }
+          ],
+          "default": 1
+        }
+      ]
+    },
+    {
+      "title": "Audio",
+      "help": "The game's own scale runs to 127.",
+      "fields": [
+        {
+          "pointer": "master_volume",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Master volume",
+          "default": 127,
+          "min": 0,
+          "max": 127,
+          "step": 1
+        },
+        {
+          "pointer": "music_volume",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Music volume",
+          "default": 127,
+          "min": 0,
+          "max": 127,
+          "step": 1
+        },
+        {
+          "pointer": "sfx_volume",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Sound effect volume",
+          "default": 127,
+          "min": 0,
+          "max": 127,
+          "step": 1
+        },
+        {
+          "pointer": "env_volume",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Environment volume",
+          "default": 127,
+          "min": 0,
+          "max": 127,
+          "step": 1
+        }
+      ]
+    },
+    {
+      "title": "Controls",
+      "fields": [
+        {
+          "pointer": "stick_deadzone",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Stick deadzone",
+          "help": "In steps of 310 of the stick's range; 16 is what the console used.",
+          "default": 16,
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "pointer": "rumble_strength",
+          "kind": "int",
+          "widget": "slider",
+          "label": "Rumble strength",
+          "default": 50,
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "title": "Game",
+      "fields": [
+        {
+          "pointer": "skip_intro",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Skip the intro",
+          "default": false
+        },
+        {
+          "pointer": "precache",
+          "kind": "bool",
+          "widget": "toggle",
+          "label": "Precache textures",
+          "help": "Loads the texture pack up front instead of as the game runs.",
+          "default": true
+        }
+      ]
+    }
+  ]
+}
